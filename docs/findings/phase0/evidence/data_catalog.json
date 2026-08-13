@@ -1,0 +1,59 @@
+{
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/data/catalog/phase0/world_bank_arabica_catalog.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/data_catalog.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/data_catalog.md"
+  ],
+  "catalog_sha256": "6a8e2adb102cf17985033e81b46afa3422e89615bd9310e62284e30530a05edf",
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_data_catalog.py",
+  "credential_state": "not_required",
+  "data_origin": "verified SM-04 selected workbook metadata only",
+  "dataset_ids": [
+    "world_bank_pink_sheet_monthly_arabica",
+    "barchart_cmdtyview_kc_star_0",
+    "ice_futures_us_coffee_c_contracts",
+    "nasdaq_data_link_scf_candidate",
+    "fred_fx_macro",
+    "world_bank_indicators",
+    "nasa_power_weather",
+    "copernicus_cds_era5",
+    "noaa_ncei_cdo",
+    "cftc_cot_coffee_c",
+    "usda_fas_psd",
+    "faostat",
+    "un_comtrade"
+  ],
+  "entry_count": 13,
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "leakage_controls": [
+    "catalog contains metadata only and rejects raw payload keys",
+    "raw, standardized, and model-ready paths are distinct",
+    "unverified source behavior remains unknown"
+  ],
+  "mode": "offline-unit",
+  "model_or_adapter": "not_applicable",
+  "network_state": "not_required",
+  "observed_result": "An initial monthly Arabica catalog was assembled from SM-04 metadata. The selected World Bank Pink Sheet workbook is the active target source, and futures/API candidates remain deferred future work.",
+  "required_catalog_fields": [
+    "dataset_id",
+    "category",
+    "name",
+    "source_provider",
+    "source_locator",
+    "access_method",
+    "native_frequency",
+    "fields",
+    "programmatic_access",
+    "auth_required",
+    "status"
+  ],
+  "run_id": "SM-05-2026-08-13T07:30:46Z",
+  "selected_dataset_id": "world_bank_pink_sheet_monthly_arabica",
+  "source_evidence": "docs/findings/phase0/evidence/datasource_metadata.json",
+  "test_id": "SM-05",
+  "timecopilot_version": "not_applicable",
+  "timestamp_utc": "2026-08-13T07:30:46Z",
+  "tool": "catalog schema validator",
+  "work_item": "initial monthly Arabica data catalog assembly"
+}

@@ -4,68 +4,30 @@
 
 Define the raw-data collection scope, minimum catalog metadata, and time-aware preparation rules for the PoC.
 
-Datasource selection is a Phase 0 decision. Raw-data collection may be broad; model features should remain selective.
+The active PoC dataset is the preserved World Bank Commodity Price Data (Pink Sheet) monthly workbook. API refresh and futures settlement datasource selection are deferred future work.
 
-## 2. Raw Data Categories
+## 2. Active Raw Data Scope
 
-### 1. Price & Liquidity
+### World Bank Pink Sheet Workbook
 
-- ICE Coffee C prices
-- Robusta futures prices
-- individual contracts where accessible
-- continuous front-month series
-- futures curve / nearby contracts
-- settlement and OHLC where available
-- volume
-- open interest
+- Raw artifact: `data/raw/world_bank/pink_sheet/CMO-Historical-Data-Monthly.xlsx`
+- Provenance: `data/raw/world_bank/pink_sheet/source_metadata.json`
+- Availability evidence: `docs/findings/phase0/world_bank_pink_sheet_availability.md`
+- Target column: `Coffee, Arabica`
+- Native frequency: monthly
+- Unit: `$/kg`
+- History: `1960M01` through `2026M07`
 
-### 2. FX & Macro
+Candidate same-workbook covariates are past covariates:
 
-- USD index
-- BRL
-- VND
-- other macro series only when justified
+- `Coffee, Robusta`
+- `Cocoa`
+- `Tea, avg 3 auctions`
+- `Crude oil, average`
+- `Sugar, world`
+- `Urea`
 
-### 3. Weather & Geospatial
-
-- precipitation
-- temperature
-- soil moisture
-- drought or crop-condition indicators
-
-Prioritize economically relevant coffee-producing regions.
-
-### 4. Market Positioning
-
-- CFTC Commitment of Traders data
-- managed-money and commercial positioning
-- gross and net position measures
-
-### 5. Physical Inventory
-
-- ICE certified stocks
-- exchange-deliverable inventory
-- other clearly defined physical inventory series
-
-### 6. Supply, Demand & Trade Flows
-
-- production and crop estimates
-- exports and imports
-- consumption and shipments
-- ending stocks
-
-### 7. Cross-Market & Substitution
-
-Raw inputs may include related market prices such as Arabica and Robusta.
-
-Derived features may include:
-
-- Arabica–Robusta spread
-- Arabica / Robusta ratio
-- calendar spreads
-- curve slope
-
-Preserve the underlying raw series separately from derived features.
+The workbook does not embed historical release timestamps. Backtests must not treat a monthly observation as available before publication.
 
 ## 3. Data Layers
 
@@ -73,7 +35,7 @@ Use three logical layers:
 
 - **Raw:** source-faithful downloaded data.
 - **Standardized:** normalized timestamps, identifiers, units, and field names.
-- **Model-ready:** experiment-specific weekly target and feature tables.
+- **Model-ready:** experiment-specific monthly target and feature tables.
 
 Do not overwrite raw data during cleaning or feature engineering.
 
@@ -109,15 +71,11 @@ Use explicit `unknown` values rather than inferred metadata.
 Canonical PoC target:
 
 ```text
-ICE Coffee C
-→ continuous front-month price
-→ weekly frequency
-→ last available settlement of each week
+World Bank Pink Sheet workbook
+-> Coffee, Arabica
+-> monthly frequency
+-> price level in $/kg
 ```
-
-A provider-constructed continuous series may be used directly.
-
-Record the provider, source identifier, and documented roll or adjustment methodology when available. Unknown roll methodology is an acceptable PoC limitation.
 
 Phase 1 model-ready target format should be compatible with TimeCopilot:
 
@@ -125,19 +83,25 @@ Phase 1 model-ready target format should be compatible with TimeCopilot:
 unique_id | ds | y
 ```
 
+The active contract uses a 60-month historical context and a 3-month forecast horizon.
+
 ## 6. Covariate Preparation
 
-Maintain a project-level weekly analytical dataset independent of any one model adapter.
+Maintain a project-level monthly analytical dataset independent of any one model adapter.
 
 Each candidate feature should have:
 
 - a stable feature name;
 - a documented raw source;
-- a weekly aggregation rule;
+- a monthly alignment rule;
 - a missing-value rule;
-- an availability class: `past_only`, `known_future`, `static`, or `unknown`.
+- an availability class: `past`, `future`, `static`, or `unknown`.
 
-Do not classify a feature as `known_future` merely because its realized future values exist in historical data.
+- **Past covariates** are known only into the past, such as measurements.
+- **Future covariates** are known into the future, such as planned holidays or forecasts from another model.
+- **Static covariates** are constant over time, such as product IDs or coffee origin.
+
+The Pink Sheet workbook does not provide future covariates, so the active PoC disregards them. Its candidate time-varying covariates are past covariates.
 
 ## 7. Mandatory Time-Aware Rules
 
@@ -150,8 +114,20 @@ At forecast origin `T`, model inputs must not contain information that would onl
 - Centered rolling windows are prohibited.
 - Do not backward-fill past observations using future values.
 - Do not interpolate across a validation boundary using future information.
-- Weekly target aggregation may use only observations from that week.
+- Monthly target preparation may use only observations available by the forecast origin.
 - Respect known publication or release lags when aligning external data.
-- Past-only covariates must end at the forecast origin.
-- Future-horizon covariate values may be supplied only if they are genuinely known at the forecast origin.
+- Past covariates must end at the forecast origin.
+- Do not supply future covariates in the active PoC.
 - If revised historical data is used because vintage data is unavailable, record the limitation; full historical-vintage reconstruction is not required for the PoC.
+
+## 8. Deferred Datasource Work
+
+The active PoC does not require API datasource selection. Historical findings for Barchart, ICE, Nasdaq, FRED, NASA POWER, CFTC, USDA, FAOSTAT, UN Comtrade, and related sources remain recorded under `docs/findings/phase0/`.
+
+Future work may revisit:
+
+- automated World Bank acquisition or refresh;
+- futures settlement sources;
+- external weather, macro, positioning, supply, demand, or trade-flow covariates.
+
+Any future datasource must preserve raw downloads separately, record unknown behavior as `unknown`, and respect publication timing.

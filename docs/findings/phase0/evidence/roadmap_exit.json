@@ -1,0 +1,46 @@
+{
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/roadmap.md",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/roadmap_exit.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/roadmap_exit.md"
+  ],
+  "checks": {
+    "all_checked_tasks_cite_evidence": true,
+    "all_phase0_tasks_checked": true,
+    "all_required_records_pass": true,
+    "catalog_exists": true,
+    "covariate_gap_roadmapped": true,
+    "monthly_contract_recorded": true,
+    "unknowns_preserved": true
+  },
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_roadmap_exit.py",
+  "credential_state": "not_required",
+  "data_origin": "roadmap and SM-01 through SM-06 evidence",
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "leakage_controls": [
+    "roadmap completion is derived from accepted evidence artifacts",
+    "covariate adapter gap requires explicit downstream roadmap work",
+    "unknowns and real-data validation limits remain open"
+  ],
+  "mode": "offline-unit",
+  "model_or_adapter": "Phase 0 aggregate",
+  "network_state": "not_required",
+  "observed_result": "All Phase 0 roadmap tasks are checked with evidence links and every required exit artifact validates.",
+  "phase0_task_count": 8,
+  "required_evidence": [
+    "docs/findings/phase0/evidence/covariate_support.json",
+    "docs/findings/phase0/evidence/probabilistic_adapters.json",
+    "docs/findings/phase0/evidence/natural_language.json",
+    "docs/findings/phase0/evidence/datasource_selection.json",
+    "docs/findings/phase0/evidence/datasource_metadata.json",
+    "docs/findings/phase0/evidence/data_catalog.json",
+    "docs/findings/phase0/evidence/decision_rollup.json"
+  ],
+  "run_id": "SM-07-2026-08-13T07:43:31Z",
+  "test_id": "SM-07",
+  "timecopilot_version": "0.0.30",
+  "timestamp_utc": "2026-08-13T07:43:31Z",
+  "tool": "roadmap/evidence exit auditor",
+  "work_item": "evidence-backed roadmap update and Phase 0 exit audit"
+}

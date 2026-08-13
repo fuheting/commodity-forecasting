@@ -1,0 +1,62 @@
+{
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/decisions.md",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/limitations.md",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/decision_rollup.json"
+  ],
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_decision_rollup.py",
+  "conclusions": {
+    "catalog": "The initial monthly Arabica catalog passed schema and layer separation with the selected workbook target source and deferred futures/API candidates.",
+    "covariate": "T0 native known-future covariates executed; TimeCopilot 0.0.30 T0 adapter omits them, so scoped compatible-adapter work is roadmapped.",
+    "datasource": "The downloaded World Bank Pink Sheet workbook is selected as the static monthly PoC source for Coffee, Arabica. ICE, Barchart, Nasdaq, and API refresh selection remain future work.",
+    "natural_language": "The credential-free deterministic TimeCopilot agent/tool contract passed all four tool calls and returned query-specific analysis.",
+    "probabilistic": "TimeCopilot 0.0.30 T0 adapter is selected for quantiles and level-derived intervals; simultaneous level and quantiles is unsupported."
+  },
+  "covariate_adapter_status": "adapter_gap_proven",
+  "credential_state": "not_required_for_rollup",
+  "data_origin": "SM-01 through SM-05 evidence artifacts",
+  "fallback_datasource": "not_applicable_for_static_monthly_poc",
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "leakage_controls": [
+    "rollup reads evidence metadata only",
+    "no unknown is promoted into a supported conclusion",
+    "monthly target construction and evaluation remain downstream"
+  ],
+  "limitations": [
+    "The active target is a World Bank monthly Arabica indicator price, not an ICE Coffee C futures settlement series.",
+    "The workbook is a static downloaded artifact and does not provide automatic refresh.",
+    "The covariate smoke proved an adapter exposure gap; the covariate-informed PoC experiment remains Phase 2 work.",
+    "No predefined accuracy or calibration threshold applies, and Phase 0 did not run the real backtest."
+  ],
+  "mode": "offline-unit",
+  "model_or_adapter": "T0 probabilistic adapter; scoped T0 covariate adapter pending",
+  "network_state": "not_required",
+  "observed_result": "All Phase 0 capability, selected workbook datasource, and catalog conclusions were reconciled to preceding evidence with unknowns and limitations preserved.",
+  "primary_datasource": "world_bank_pink_sheet_monthly_arabica",
+  "probabilistic_adapter": "timecopilot.models.foundation.t0.T0",
+  "recommended_fallback_candidate": "deferred_api_or_ice_selection",
+  "recommended_primary_candidate": "world_bank_pink_sheet_monthly_arabica",
+  "run_id": "SM-06-2026-08-13T07:43:31Z",
+  "source_evidence": {
+    "catalog": "docs/findings/phase0/evidence/data_catalog.json",
+    "covariate": "docs/findings/phase0/evidence/covariate_support.json",
+    "datasource": "docs/findings/phase0/evidence/datasource_selection.json",
+    "natural_language": "docs/findings/phase0/evidence/natural_language.json",
+    "probabilistic": "docs/findings/phase0/evidence/probabilistic_adapters.json"
+  },
+  "test_id": "SM-06",
+  "timecopilot_version": "0.0.30",
+  "timestamp_utc": "2026-08-13T07:43:31Z",
+  "tool": "evidence reconciliation validator",
+  "unknowns": [
+    "World Bank workbook historical release timestamps are not embedded, so publication availability must be enforced conservatively.",
+    "Automated World Bank API or refresh acquisition is not selected for the PoC.",
+    "Barchart KC*0 entitled historical settlement retrieval remains unverified future work.",
+    "Coffee C-specific ICE history start and usage limits remain unverified future work.",
+    "Nasdaq Data Link SCF Coffee C mapping, fields, access, and roll methodology remain unknown.",
+    "FAOSTAT programmatic access remains unknown after the API host returned error 521.",
+    "External-provider LLM language quality and credentials were not tested."
+  ],
+  "work_item": "Phase 0 decisions and limitations rollup"
+}

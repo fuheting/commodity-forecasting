@@ -1,0 +1,78 @@
+{
+  "adapter_exposure": "univariate_only_adapter_omits_covariates",
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/tests/fixtures/phase0/weekly_target.csv",
+    "/home/hfu_nestle/projects/commodity-forecasting/tests/fixtures/phase0/covariates.csv",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/covariate_support.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/covariate_support.md"
+  ],
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_covariate_support.py",
+  "covariate_path_classification": "known_future",
+  "credential_state": "not_required_or_not_configured",
+  "data_origin": "synthetic",
+  "executable_evidence": {
+    "native_t0": {
+      "direct_predict_output_shape": [
+        1,
+        2,
+        2
+      ],
+      "direct_predict_quantile_levels": [
+        0.1,
+        0.5
+      ],
+      "direct_predict_with_future_covariates": "pass",
+      "future_covariates_parameter": true,
+      "import_name": "t0",
+      "package": "tfc-t0",
+      "predict_signature": "(self, context: jaxtyping.Float[Tensor, 'batch time'] | jaxtyping.Float[Tensor, 'batch variates time'] | jaxtyping.Float[ndarray, 'batch time'] | jaxtyping.Float[ndarray, 'batch variates time'], horizon: int, quantiles: collections.abc.Sequence[float] = (0.1, 0.5, 0.9), future_covariates: jaxtyping.Float[Tensor, 'batch future_variates context_plus_horizon'] | jaxtyping.Float[ndarray, 'batch future_variates context_plus_horizon'] | None = None) -> t0.model.model.Forecast"
+    },
+    "timecopilot_adapter": {
+      "adapter": "timecopilot.models.foundation.t0.T0",
+      "adapter_omitted_future_covariates": true,
+      "forecast_accepts_covariate_kwargs": false,
+      "forecast_output_columns": [
+        "unique_id",
+        "ds",
+        "t0-alpha",
+        "t0-alpha-q-10",
+        "t0-alpha-q-50"
+      ],
+      "forecast_signature": "(self, df: pandas.core.frame.DataFrame, h: int, freq: str | None = None, level: list[int | float] | None = None, quantiles: list[float] | None = None) -> pandas.core.frame.DataFrame",
+      "input_covariate_columns": [
+        "past_signal",
+        "known_future_signal"
+      ],
+      "native_predict_calls": [
+        {
+          "future_covariates_seen": false,
+          "keyword_args": [
+            "horizon",
+            "quantiles"
+          ],
+          "positional_arg_count": 1
+        }
+      ]
+    }
+  },
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "gate_result": "adapter_gap_proven",
+  "leakage_controls": [
+    "synthetic target only; no real Coffee C data",
+    "past-only covariates are sliced at the forecast origin",
+    "known-future covariates are marked known_at_origin",
+    "no random train/test split"
+  ],
+  "mode": "network-smoke",
+  "model_native_capability": "known_future_future_covariates_executed",
+  "model_or_adapter": "timecopilot.models.foundation.t0.T0",
+  "network_state": "not_required_monkeypatched_local",
+  "observed_result": "Native tfc-t0 T0Forecaster.predict accepted and executed future_covariates on a tiny local model, while the TimeCopilot T0.forecast adapter accepted only the univariate forecast contract and a monkeypatched adapter run with covariate columns passed no future_covariates keyword to native predict.",
+  "run_id": "SM-01-2026-08-12T16:49:36Z",
+  "test_id": "SM-01",
+  "timecopilot_version": "0.0.30",
+  "timestamp_utc": "2026-08-12T16:49:36Z",
+  "tool": "pytest",
+  "work_item": "covariate-support smoke test"
+}

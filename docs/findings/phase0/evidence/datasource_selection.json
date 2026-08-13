@@ -1,0 +1,600 @@
+{
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/datasource_selection.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/datasource_metadata.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/datasource_comparison.md",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/datasource_selection.md",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/datasource_metadata.md"
+  ],
+  "candidates": [
+    {
+      "access_method": "checked-in static workbook downloaded from the official World Bank source",
+      "candidate_id": "world_bank_pink_sheet_monthly_arabica",
+      "continuous_series_kind": "static_monthly_workbook",
+      "credential_requirement": "none for the downloaded artifact",
+      "documentation_urls": [
+        "https://www.worldbank.org/en/research/commodity-markets",
+        "data/raw/world_bank/pink_sheet/source_metadata.json",
+        "docs/findings/phase0/evidence/world_bank_pink_sheet_availability.json"
+      ],
+      "history_end": "2026M07",
+      "history_start": "1960M01",
+      "local_raw_path": "data/raw/world_bank/pink_sheet/",
+      "local_standardized_path": "data/standardized/world_bank/pink_sheet/",
+      "metadata_probe": "selected static monthly Arabica PoC source; API refresh and futures settlement sources are future work",
+      "native_frequency": "monthly",
+      "programmatic_access": "static_workbook_available",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "downloaded official World Bank Pink Sheet workbook is preserved unchanged and contains the selected monthly Coffee, Arabica series",
+        "http_status": "not_applicable_local_artifact",
+        "observed_fields": [
+          "Date",
+          "Coffee, Arabica",
+          "Coffee, Robusta",
+          "Cocoa",
+          "Tea, avg 3 auctions",
+          "Crude oil, average",
+          "Sugar, world",
+          "Urea"
+        ],
+        "observed_history_end": "2026M07",
+        "observed_history_start": "1960M01",
+        "outcome": "success",
+        "row_count": 799,
+        "series_identity_proven": true,
+        "settlement_field_proven": false
+      },
+      "provider": "World Bank Commodity Price Data (Pink Sheet)",
+      "required_field_status": "Coffee, Arabica monthly series identity proven; not an ICE Coffee C settlement field",
+      "required_fields": [
+        "Date",
+        "Coffee, Arabica"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "data/raw/world_bank/pink_sheet/CMO-Historical-Data-Monthly.xlsx",
+      "usage_limits": "World Bank Commodity Prices workbook is public; preserve source metadata and citation"
+    },
+    {
+      "access_method": "BCT/BCH Excel functions; account entitlement required",
+      "candidate_id": "barchart_cmdtyview_kc_star_0",
+      "continuous_series_kind": "provider_continuous_front_month",
+      "credential_requirement": "Barchart cmdtyView entitlement",
+      "documentation_urls": [
+        "https://docs.barchart.com/cmdty-excel-docs/syntax-and-functions/",
+        "https://docs.barchart.com/cmdty-excel-docs/history/"
+      ],
+      "history_end": "current subject to entitlement",
+      "history_start": "unknown",
+      "local_raw_path": "data/raw/barchart/coffee_c/",
+      "local_standardized_path": "data/standardized/barchart/coffee_c/",
+      "metadata_probe": "official documentation retrieved; entitled KC*0 data call not executed",
+      "native_frequency": "daily_or_weekly",
+      "programmatic_access": "documented_via_excel_functions",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "host-network getHistory read through Clash reached Barchart but the supplied demo key was rejected",
+        "http_status": 401,
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "credential_blocked",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "Barchart cmdtyView for Excel",
+      "required_field_status": {
+        "Settle": "documented in provider field catalog; historical KC*0 execution unverified",
+        "date": "documented"
+      },
+      "required_fields": [
+        "date",
+        "Settle"
+      ],
+      "roll_methodology": {
+        "back_adjustment": "unknown",
+        "documented_options": [
+          "expiration",
+          "days_before_expiration",
+          "volume_and_open_interest"
+        ],
+        "selected_option": "unknown"
+      },
+      "source_locator": "KC*0",
+      "usage_limits": "50,000 daily EOD rows documented for DEFAULT_EOD; entitlement-specific limits unknown"
+    },
+    {
+      "access_method": "ICE Connect, ICE XL, API, or bulk file service",
+      "candidate_id": "ice_futures_us_coffee_c_contracts",
+      "continuous_series_kind": "raw_contracts_for_later_construction",
+      "credential_requirement": "commercial ICE entitlement",
+      "documentation_urls": [
+        "https://www.ice.com/products/15/coffee-c-futures/data",
+        "https://developer.ice.com/fixed-income-data-services/catalog/ice-futures-us"
+      ],
+      "history_end": "current subject to entitlement",
+      "history_start": "1980 for ICE Futures U.S. dataset; Coffee C-specific start unknown",
+      "local_raw_path": "data/raw/ice/coffee_c/",
+      "local_standardized_path": "data/standardized/ice/coffee_c/",
+      "metadata_probe": "official documentation retrieved; entitled contract data call not executed",
+      "native_frequency": "daily",
+      "programmatic_access": "documented_api_and_bulk_services",
+      "programmatic_read": {
+        "attempted": false,
+        "detail": "no authorized ICE API or bulk-service entitlement is configured",
+        "http_status": "not_attempted",
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "credential_blocked",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "ICE Futures U.S.",
+      "required_field_status": "Coffee C product and data access documented; entitled field-level read unverified",
+      "required_fields": [
+        "contract",
+        "date",
+        "settlement"
+      ],
+      "roll_methodology": "unknown",
+      "source_locator": "Coffee C Futures product 15",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "REST API when supported by the specific premium product",
+      "candidate_id": "nasdaq_data_link_scf_candidate",
+      "continuous_series_kind": "unknown",
+      "credential_requirement": "unknown; premium access likely but not established for this candidate",
+      "documentation_urls": [
+        "https://docs.data.nasdaq.com/docs/data-organization",
+        "https://docs.data.nasdaq.com/v1.0/docs/in-depth-usage",
+        "https://docs.data.nasdaq.com/docs/parameters-1"
+      ],
+      "history_end": "unknown",
+      "history_start": "unknown",
+      "local_raw_path": "data/raw/nasdaq_data_link/coffee_c/",
+      "local_standardized_path": "data/standardized/nasdaq_data_link/coffee_c/",
+      "metadata_probe": "generic API documentation retrieved; Coffee C product mapping not established",
+      "native_frequency": "unknown",
+      "programmatic_access": "unknown_for_coffee_c_candidate",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "host-network CHRIS/ICE_KC1 read through Clash was rejected by the provider WAF",
+        "http_status": 403,
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "access_blocked",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "Nasdaq Data Link",
+      "required_field_status": "unknown",
+      "required_fields": [
+        "date",
+        "settlement"
+      ],
+      "roll_methodology": "unknown",
+      "source_locator": "SCF candidate; Coffee C dataset mapping unverified",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "REST API with key; public graph CSV also available for the probed series",
+      "candidate_id": "fred_fx_macro",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "API key for the documented JSON API; none for the probed CSV endpoint",
+      "documentation_urls": [
+        "https://fred.stlouisfed.org/docs/api/fred/overview.html"
+      ],
+      "history_end": "series_dependent",
+      "history_start": "series_dependent",
+      "local_raw_path": "data/raw/fred/",
+      "local_standardized_path": "data/standardized/fred/",
+      "metadata_probe": "usable supporting FX/macro source; unsupported as the Coffee C settlement target or raw-contract fallback",
+      "native_frequency": "series_dependent",
+      "programmatic_access": "public_csv_read_proven",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public FRED CSV returned BRL/USD observations; the official JSON API returned 400 without an API key",
+        "http_status": 200,
+        "observed_fields": [
+          "DATE",
+          "DEXBZUS"
+        ],
+        "observed_history_end": "2026-08-07",
+        "observed_history_start": "2026-08-03",
+        "outcome": "success",
+        "row_count": 5,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "FRED",
+      "required_field_status": "BRL/USD observations proven; no futures settlement field",
+      "required_fields": [
+        "date",
+        "value"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "DEXBZUS bounded BRL/USD probe",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "public REST API",
+      "candidate_id": "world_bank_indicators",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "none for the probed endpoint",
+      "documentation_urls": [
+        "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation"
+      ],
+      "history_end": "indicator_dependent",
+      "history_start": "indicator_dependent",
+      "local_raw_path": "data/raw/world_bank/",
+      "local_standardized_path": "data/standardized/world_bank/",
+      "metadata_probe": "usable supporting macro source; unsupported as the Coffee C settlement target or raw-contract fallback",
+      "native_frequency": "indicator_dependent; probed series annual",
+      "programmatic_access": "public_read_proven",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public API returned Brazil official exchange-rate observations",
+        "http_status": 200,
+        "observed_fields": [
+          "country",
+          "date",
+          "indicator",
+          "value"
+        ],
+        "observed_history_end": "2023",
+        "observed_history_start": "2021",
+        "outcome": "success",
+        "row_count": 3,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "World Bank Indicators API",
+      "required_field_status": "macro observations proven; no futures settlement field",
+      "required_fields": [
+        "country",
+        "date",
+        "indicator",
+        "value"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "BRA/PA.NUS.FCRF bounded probe",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "public REST API",
+      "candidate_id": "nasa_power_weather",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "none for the probed endpoint",
+      "documentation_urls": [
+        "https://power.larc.nasa.gov/docs/services/api/"
+      ],
+      "history_end": "parameter_dependent",
+      "history_start": "parameter_dependent",
+      "local_raw_path": "data/raw/nasa_power/",
+      "local_standardized_path": "data/standardized/nasa_power/",
+      "metadata_probe": "usable supporting weather source; feature availability and location selection remain Phase 1 decisions",
+      "native_frequency": "daily_or_hourly",
+      "programmatic_access": "public_read_proven",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public daily API returned temperature and precipitation for a bounded Brazil coordinate probe",
+        "http_status": 200,
+        "observed_fields": [
+          "date",
+          "T2M",
+          "PRECTOTCORR"
+        ],
+        "observed_history_end": "2026-01-05",
+        "observed_history_start": "2026-01-01",
+        "outcome": "success",
+        "row_count": 5,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "NASA POWER",
+      "required_field_status": "weather observations proven; no futures settlement field",
+      "required_fields": [
+        "date",
+        "T2M",
+        "PRECTOTCORR"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "Brazil coordinate daily point API probe",
+      "usage_limits": "documented request constraints; practical limits not measured"
+    },
+    {
+      "access_method": "CDS API after account setup and dataset terms acceptance",
+      "candidate_id": "copernicus_cds_era5",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "account and accepted terms for data retrieval",
+      "documentation_urls": [
+        "https://cds.climate.copernicus.eu/how-to-api"
+      ],
+      "history_end": "present from catalogue metadata",
+      "history_start": "1940 from catalogue metadata",
+      "local_raw_path": "data/raw/copernicus_era5/",
+      "local_standardized_path": "data/standardized/copernicus_era5/",
+      "metadata_probe": "supporting weather candidate; authenticated data read not executed",
+      "native_frequency": "hourly_reanalysis",
+      "programmatic_access": "public_metadata_only",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public catalogue metadata was readable; an authenticated ERA5 data download was not executed",
+        "http_status": 200,
+        "observed_fields": [
+          "collection_metadata"
+        ],
+        "observed_history_end": "present",
+        "observed_history_start": "1940",
+        "outcome": "metadata_only",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "Copernicus CDS / ERA5",
+      "required_field_status": "catalogue metadata proven; data fields unverified",
+      "required_fields": [
+        "valid_time",
+        "weather_variable",
+        "latitude",
+        "longitude"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "reanalysis-era5-single-levels catalogue",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "REST API with token",
+      "candidate_id": "noaa_ncei_cdo",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "NOAA CDO token",
+      "documentation_urls": [
+        "https://www.ncei.noaa.gov/cdo-web/webservices/v2"
+      ],
+      "history_end": "unknown",
+      "history_start": "unknown",
+      "local_raw_path": "data/raw/noaa_cdo/",
+      "local_standardized_path": "data/standardized/noaa_cdo/",
+      "metadata_probe": "supporting climate candidate; access blocked by missing token",
+      "native_frequency": "dataset_dependent",
+      "programmatic_access": "credential_blocked",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "CDO v2 rejected the bounded dataset request because a token parameter is required",
+        "http_status": 400,
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "credential_blocked",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "NOAA NCEI CDO",
+      "required_field_status": "unverified because token is required",
+      "required_fields": [
+        "date",
+        "station",
+        "datatype",
+        "value"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "CDO Web Services v2 datasets endpoint",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "public Socrata REST API",
+      "candidate_id": "cftc_cot_coffee_c",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "none for bounded public reads",
+      "documentation_urls": [
+        "https://dev.socrata.com/foundry/publicreporting.cftc.gov/kh3c-gbw2"
+      ],
+      "history_end": "2026-08-04 observed",
+      "history_start": "2006-06-13 observed",
+      "local_raw_path": "data/raw/cftc_cot/coffee_c/",
+      "local_standardized_path": "data/standardized/cftc_cot/coffee_c/",
+      "metadata_probe": "usable supporting positioning source; not a target-price datasource",
+      "native_frequency": "weekly",
+      "programmatic_access": "public_read_proven",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public Socrata API returned Coffee C positioning records for CFTC contract-market code 083731",
+        "http_status": 200,
+        "observed_fields": [
+          "report_date_as_yyyy_mm_dd",
+          "open_interest_all",
+          "managed_money_positions_long_all"
+        ],
+        "observed_history_end": "2026-08-04",
+        "observed_history_start": "2006-06-13",
+        "outcome": "success",
+        "row_count": 1052,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "CFTC Public Reporting / COT",
+      "required_field_status": "Coffee C positioning fields proven; no settlement price",
+      "required_fields": [
+        "report_date",
+        "open_interest",
+        "position_categories"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "Socrata kh3c-gbw2; contract-market code 083731",
+      "usage_limits": "Socrata limits apply; not measured"
+    },
+    {
+      "access_method": "REST API with key",
+      "candidate_id": "usda_fas_psd",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "USDA FAS API key",
+      "documentation_urls": [
+        "https://apps.fas.usda.gov/opendata/swagger/ui/index"
+      ],
+      "history_end": "unknown",
+      "history_start": "unknown",
+      "local_raw_path": "data/raw/usda_fas_psd/",
+      "local_standardized_path": "data/standardized/usda_fas_psd/",
+      "metadata_probe": "supporting supply/demand candidate; access blocked by missing key",
+      "native_frequency": "marketing_year",
+      "programmatic_access": "credential_blocked",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "PSD endpoint returned Bad API Key without a configured USDA key",
+        "http_status": 403,
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "credential_blocked",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "USDA FAS PSD",
+      "required_field_status": "unverified because the API rejected the request without a valid key",
+      "required_fields": [
+        "commodity",
+        "country",
+        "market_year",
+        "attribute",
+        "value"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "PSD Online Data Services API",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "public REST API candidate",
+      "candidate_id": "faostat",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "unknown",
+      "documentation_urls": [
+        "https://www.fao.org/faostat/en/#data"
+      ],
+      "history_end": "unknown",
+      "history_start": "unknown",
+      "local_raw_path": "data/raw/faostat/",
+      "local_standardized_path": "data/standardized/faostat/",
+      "metadata_probe": "supporting production/trade candidate; access outcome remains unproven after provider error",
+      "native_frequency": "dataset_dependent",
+      "programmatic_access": "provider_unavailable_during_probe",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "FAOSTAT API host returned provider error 521 through the working Clash path",
+        "http_status": 521,
+        "observed_fields": [],
+        "observed_history_end": "unknown",
+        "observed_history_start": "unknown",
+        "outcome": "provider_unavailable",
+        "row_count": 0,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "FAOSTAT",
+      "required_field_status": "unverified because the API host returned 521",
+      "required_fields": [
+        "area",
+        "item",
+        "element",
+        "year",
+        "value"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "FAOSTAT API v1",
+      "usage_limits": "unknown"
+    },
+    {
+      "access_method": "public preview REST API; subscription key for larger production use",
+      "candidate_id": "un_comtrade",
+      "continuous_series_kind": "unsupported",
+      "credential_requirement": "none for bounded preview read",
+      "documentation_urls": [
+        "https://uncomtrade.org/docs/un-comtrade-api/"
+      ],
+      "history_end": "dataset_dependent",
+      "history_start": "dataset_dependent",
+      "local_raw_path": "data/raw/un_comtrade/coffee/",
+      "local_standardized_path": "data/standardized/un_comtrade/coffee/",
+      "metadata_probe": "usable supporting trade-flow source; not a target-price datasource",
+      "native_frequency": "annual_or_monthly",
+      "programmatic_access": "public_preview_read_proven",
+      "programmatic_read": {
+        "attempted": true,
+        "detail": "public preview API returned one aggregate Brazil coffee-export record for HS 0901",
+        "http_status": 200,
+        "observed_fields": [
+          "period",
+          "reporterCode",
+          "cmdCode",
+          "flowCode",
+          "netWgt",
+          "primaryValue"
+        ],
+        "observed_history_end": "2022",
+        "observed_history_start": "2022",
+        "outcome": "success",
+        "row_count": 1,
+        "series_identity_proven": false,
+        "settlement_field_proven": false
+      },
+      "provider": "UN Comtrade",
+      "required_field_status": "aggregate coffee trade fields proven; no futures settlement field",
+      "required_fields": [
+        "period",
+        "reporter",
+        "partner",
+        "flow",
+        "cmdCode",
+        "netWgt",
+        "primaryValue"
+      ],
+      "roll_methodology": "not_applicable",
+      "source_locator": "public preview API; Brazil exports HS 0901",
+      "usage_limits": "preview endpoint is bounded; production limits depend on access tier"
+    }
+  ],
+  "classification": "pass",
+  "command": "bounded provider reads plus PYTHONPATH=src .venv/bin/python -m commodity_forecasting.phase0.smoke_datasources",
+  "continuous_series_kind": "static_monthly_workbook",
+  "credential_state": "no credentials required for the selected workbook artifact; ICE, Barchart, and several supporting APIs remain deferred or credential-gated",
+  "data_origin": "selected official static workbook plus historical provider metadata; no raw market payload embedded in evidence",
+  "fallback_datasource": "not_applicable_for_static_monthly_poc",
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "forecast_contract": {
+    "covariate_availability": "past_only",
+    "forecast_horizon": "3 months",
+    "frequency": "monthly",
+    "historical_context": "60 months",
+    "target": "Coffee, Arabica",
+    "unit": "$/kg"
+  },
+  "leakage_controls": [
+    "raw workbook is preserved separately from standardized and model-ready outputs",
+    "monthly observations are not considered available before publication",
+    "same-workbook candidate covariates remain past_only rather than known_future",
+    "no monthly series is upsampled or represented as weekly settlement data"
+  ],
+  "mode": "network-smoke",
+  "model_or_adapter": "not_applicable",
+  "network_state": "host-network reads succeeded through Clash; in-sandbox loopback proxy access is restricted",
+  "observed_result": "The downloaded official World Bank Pink Sheet workbook is selected as the static monthly PoC source for Coffee, Arabica, with 799 monthly observations from 1960M01 through 2026M07. The workbook is not an ICE Coffee C settlement source. Barchart, ICE, Nasdaq, and API-based refresh selection remain future work rather than Phase 0 blockers.",
+  "primary_datasource": "world_bank_pink_sheet_monthly_arabica",
+  "recommended_fallback_candidate": "deferred_api_or_ice_selection",
+  "recommended_primary_candidate": "world_bank_pink_sheet_monthly_arabica",
+  "roll_methodology": "not_applicable",
+  "run_id": "SM-04-2026-08-13T07:30:25Z",
+  "selection_basis": "The official workbook is already downloaded, checksummed, preserved in the raw layer, and proven to contain the selected monthly Coffee, Arabica series. ICE Coffee C settlement and automated/API datasource selection are deferred because they are unnecessary for the lean monthly PoC.",
+  "selection_gate": "Phase 1 may build the monthly Arabica target from the preserved workbook. Any API refresh path, Barchart KC*0 access, or ICE raw-contract settlement workflow is future work outside Phase 0.",
+  "test_id": "SM-04",
+  "timecopilot_version": "not_applicable",
+  "timestamp_utc": "2026-08-13T07:30:25Z",
+  "tool": "provider documentation and sanitized programmatic-read probe",
+  "work_item": "World Bank Pink Sheet workbook adoption and datasource deferral"
+}
