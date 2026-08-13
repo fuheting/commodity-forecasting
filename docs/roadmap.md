@@ -29,11 +29,19 @@ State markers:
 
 ## Phase 1: Monthly Arabica History-Only Forecasting (Planned)
 
-- [ ] Build the monthly `Coffee, Arabica` target-data pipeline from the preserved workbook.
-- [ ] Run history-only TimeCopilot forecasting with a 60-month context and 3-month horizon.
-- [ ] Implement time-series-aware historical validation.
-- [ ] Evaluate probabilistic forecast results.
-- [ ] Exercise TimeCopilot natural-language forecast, analysis, and explanation.
+Execution plan: `docs/tasks/phase1-history-only-forecasting.md`.
+
+- [ ] **P1-01 — Dependency/readiness contract.** Use the approved minimal `openpyxl>=3.1,<4` reader, define Phase 1 paths and evidence contracts, and record the publication-availability policy; `openpyxl==3.1.5` has read the preserved workbook and located `Coffee, Arabica` in `Monthly Prices`. Custom XLSX parsers remain prohibited. Evidence: `docs/findings/phase1/dependency_readiness.md` and `docs/findings/phase1/evidence/dependency_readiness.json`.
+- [ ] **P1-02 — Monthly target pipeline.** Depends on P1-01. Build the preserved workbook's monthly `Coffee, Arabica` series into separate standardized and model-ready `unique_id / ds / y` artifacts. Evidence: `docs/findings/phase1/target_pipeline.md` plus schema, timestamp, and leakage tests.
+- [ ] **P1-03 — Official-document edge-feasibility screen.** Depends on P1-02. Screen every documented local-capable Time Series Foundation Model family at the artifact-variant level against official evidence and the recorded 16 GB GPU target; required unknowns are not eligible. Evidence: `docs/findings/phase1/model_screening.md` and `docs/findings/phase1/evidence/model_screening.json`.
+- [ ] **P1-04 — User shortlist approval gate.** Depends on P1-03. Present the eligible candidates and stop until the user explicitly approves the candidates allowed to run. Evidence: `docs/findings/phase1/shortlist_approval.md` and `docs/findings/phase1/evidence/shortlist_approval.json`.
+- [ ] **P1-05 — Runtime compatibility and reference selection.** Depends on P1-04. Test only the approved shortlist through TimeCopilot, require point plus supported probabilistic output, and select one reference by contract completeness, verified edge footprint, then user-approved order. Evidence: `docs/findings/phase1/runtime_compatibility.md` and `docs/findings/phase1/evidence/runtime_compatibility.json`.
+- [ ] **P1-06 — Monthly rolling-origin forecasts.** Depends on P1-05. Run exactly 12 one-month-step origins using exactly 60 training months and a 3-month horizon, history only. Evidence: forecast artifacts and `docs/findings/phase1/rolling_origin.md`.
+- [ ] **P1-07 — Point and probabilistic evaluation.** Depends on P1-06. Report MAE and RMSE plus interval coverage/width or quantile pinball loss/coverage, without a performance threshold. Evidence: `docs/findings/phase1/evaluation.md` and `docs/findings/phase1/evidence/evaluation.json`.
+- [ ] **P1-08 — Natural-language exercise.** Depends on P1-06. Use PydanticAI's native DeepSeek provider through TimeCopilot (`deepseek:deepseek-v4-flash`); no custom DeepSeek adapter is required. Load `DEEPSEEK_API_KEY` from `.env` without persisting its value, then require non-empty forecast analysis and a query-specific response on the Phase 1 workflow. Evidence: `docs/findings/phase1/natural_language.md` and `docs/findings/phase1/evidence/natural_language.json`.
+- [ ] **P1-09 — Evidence rollup and Phase 1 exit.** Depends on P1-01 through P1-08. Cross-link all evidence, decisions, unknowns, and limitations, then update task status only where acceptance evidence passes. Evidence: `docs/findings/phase1/exit_rollup.md` and `docs/findings/phase1/evidence/exit_rollup.json`.
+
+**Exit condition:** P1-01 through P1-08 have passing acceptance evidence; the monthly pipeline is reproducible and leakage-safe; the screened shortlist was explicitly approved before runtime tests; one approved reference model produced the required 12 rolling-origin probabilistic forecasts; point accuracy and probabilistic calibration are reported without a score gate; the natural-language workflow passes; and P1-09 confirms that the roadmap matches the evidence. `blocked` and `unsupported` records are valid findings but do not complete a task or Phase 1.
 
 ---
 
