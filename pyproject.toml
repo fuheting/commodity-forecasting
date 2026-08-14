@@ -7,7 +7,7 @@ name = "commodity-forecasting"
 version = "0.1.0"
 description = "Commodity price forecasting proof of concept with TimeCopilot."
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["openpyxl>=3.1,<4"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

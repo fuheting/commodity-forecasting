@@ -1,0 +1,58 @@
+{
+  "checks": {
+    "evidence_json_written_last": true,
+    "monthly_contiguous": true,
+    "numeric_serializer_valid": true,
+    "p101_evidence_pass": true,
+    "p101_evidence_valid": true,
+    "p101_finding_matches": true,
+    "p101_publication_policy_matches": true,
+    "publication_bytes_valid": true,
+    "raw_hash_unchanged": true,
+    "row_count_799": true,
+    "schemas_valid": true,
+    "semantic_rows_match": true,
+    "source_exact_target_found": true
+  },
+  "classification": "pass",
+  "errors": [],
+  "header_row": 5,
+  "model_ready_path": "data/model_ready/world_bank_pink_sheet_monthly_arabica/target.csv",
+  "model_ready_sha256": "f360fc49d2537785ea4b5b51809cac8186048059121c5b16864a0ca25f06cbb7",
+  "period_count": 799,
+  "period_end": "2026M07",
+  "period_start": "1960M01",
+  "publication_policy": {
+    "availability_proxy": "strict_prior_month",
+    "evaluation_label": "revised_workbook_pseudo_real_time",
+    "historical_release_timestamps_available": false,
+    "historical_vintages_available": false,
+    "limitation": "Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.",
+    "prohibited_claim": "Do not describe this evaluation as vintage-real-time."
+  },
+  "run_id": "P1-02-20260814T084205Z",
+  "schema_version": 1,
+  "schemas": {
+    "model_ready": [
+      "unique_id",
+      "ds",
+      "y"
+    ],
+    "standardized": [
+      "unique_id",
+      "ds",
+      "y"
+    ]
+  },
+  "sheet_name": "Monthly Prices",
+  "source_sha256_after": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "source_sha256_before": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "source_workbook_path": "data/raw/world_bank/pink_sheet/CMO-Historical-Data-Monthly.xlsx",
+  "standardized_path": "data/standardized/world_bank/pink_sheet/coffee_arabica_monthly.csv",
+  "standardized_sha256": "f360fc49d2537785ea4b5b51809cac8186048059121c5b16864a0ca25f06cbb7",
+  "target_column": "Coffee, Arabica",
+  "target_column_index": 13,
+  "task_id": "P1-02",
+  "timestamp_utc": "2026-08-14T08:42:05Z",
+  "unique_id": "world_bank_pink_sheet_monthly_arabica"
+}
