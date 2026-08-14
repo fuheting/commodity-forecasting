@@ -1,14 +1,12 @@
-# Commodity Futures Forecasting with TimeCopilot
+# Commodity Price Forecasting with TimeCopilot
 
-A lean proof-of-concept project for probabilistic commodity futures forecasting using TimeCopilot.
+A lean proof-of-concept project for probabilistic commodity price forecasting using TimeCopilot.
 
-The initial use case is **ICE Coffee C**:
+The active use case is the World Bank Pink Sheet **Coffee, Arabica** series:
 
-- target: continuous front-month price level
-- weekly value: last available settlement of each week
-- forecast frequency: weekly
-- forecast horizon: 12 weeks
-- historical context: 260 weeks
+- target: monthly price level in `$/kg`
+- forecast horizon: 3 months
+- historical context: 60 months
 
 ## PoC Structure
 
@@ -20,14 +18,16 @@ The PoC also includes TimeCopilot natural-language forecast queries, analysis, a
 
 Multimodal inputs, model fine-tuning, trading strategies, and production deployment are out of scope.
 
+The weekly synthetic fixtures under `tests/fixtures/phase0/` are retained only to reproduce completed Phase 0 adapter-capability smoke tests. They do not define the active monthly forecast contract.
+
 ## Current Status
 
-**Phase 0 — Capability & Data Discovery**
+**Phase 0 — Complete; Phase 1 ready**
 
-Phase 0 determines:
+Phase 0 established:
 
 - actual TimeCopilot covariate support;
-- usable datasource candidates;
+- the preserved World Bank workbook as the static PoC source;
 - the initial data catalog.
 
 See `docs/roadmap.md` for implementation progress.

@@ -1,0 +1,141 @@
+{
+  "adapter_exposure": "quantiles_and_level_exposed",
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/tests/fixtures/phase0/weekly_target.csv",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/probabilistic_adapters.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/probabilistic_adapters.md"
+  ],
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_probabilistic_adapters.py",
+  "credential_state": "not_required_or_not_configured",
+  "data_origin": "synthetic",
+  "executable_evidence": {
+    "adapter": "timecopilot.models.foundation.t0.T0",
+    "forecast_signature": "(self, df: pandas.core.frame.DataFrame, h: int, freq: str | None = None, level: list[int | float] | None = None, quantiles: list[float] | None = None) -> pandas.core.frame.DataFrame",
+    "level": {
+      "classification": "pass",
+      "native_predict_calls": [
+        {
+          "future_covariates_seen": false,
+          "horizon": 3,
+          "keyword_args": [
+            "horizon",
+            "quantiles"
+          ],
+          "positional_arg_count": 1,
+          "quantiles": [
+            0.1,
+            0.5,
+            0.9
+          ]
+        }
+      ],
+      "output_columns": [
+        "unique_id",
+        "ds",
+        "t0-alpha",
+        "t0-alpha-lo-80",
+        "t0-alpha-hi-80"
+      ],
+      "parameters": {
+        "level": [
+          80
+        ]
+      },
+      "row_count": 3
+    },
+    "quantiles": {
+      "classification": "pass",
+      "native_predict_calls": [
+        {
+          "future_covariates_seen": false,
+          "horizon": 3,
+          "keyword_args": [
+            "horizon",
+            "quantiles"
+          ],
+          "positional_arg_count": 1,
+          "quantiles": [
+            0.1,
+            0.5,
+            0.9
+          ]
+        }
+      ],
+      "output_columns": [
+        "unique_id",
+        "ds",
+        "t0-alpha",
+        "t0-alpha-q-10",
+        "t0-alpha-q-50",
+        "t0-alpha-q-90"
+      ],
+      "parameters": {
+        "quantiles": [
+          0.1,
+          0.5,
+          0.9
+        ]
+      },
+      "row_count": 3
+    },
+    "simultaneous_level_quantiles": {
+      "classification": "unsupported",
+      "error": "You must not provide both `level` and `quantiles` simultaneously.",
+      "parameters": {
+        "level": [
+          80
+        ],
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      }
+    }
+  },
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "gate_result": "compatible_adapter_selected",
+  "leakage_controls": [
+    "synthetic target only; no real Coffee C data",
+    "forecast horizon is generated strictly after the last fixture timestamp",
+    "probabilistic output is exercised through adapter arguments only",
+    "no random train/test split"
+  ],
+  "mode": "network-smoke",
+  "model_native_capability": "native_probabilistic_quantiles",
+  "model_or_adapter": "timecopilot.models.foundation.t0.T0",
+  "network_state": "not_required_monkeypatched_local",
+  "observed_result": "TimeCopilot 0.0.30 T0.forecast returned requested quantile columns for quantiles=[0.1, 0.5, 0.9] and interval columns for level=[80] through the adapter. The adapter rejected simultaneous level and quantiles with the documented ValueError.",
+  "output_columns": [
+    "ds",
+    "t0-alpha",
+    "t0-alpha-hi-80",
+    "t0-alpha-lo-80",
+    "t0-alpha-q-10",
+    "t0-alpha-q-50",
+    "t0-alpha-q-90",
+    "unique_id"
+  ],
+  "probabilistic_output_kind": "both",
+  "run_id": "SM-02-2026-08-12T16:54:21Z",
+  "test_id": "SM-02",
+  "timecopilot_version": "0.0.30",
+  "timestamp_utc": "2026-08-12T16:54:21Z",
+  "tool": "pytest",
+  "unsupported_combinations": [
+    {
+      "classification": "unsupported",
+      "error": "You must not provide both `level` and `quantiles` simultaneously.",
+      "parameters": {
+        "level": [
+          80
+        ],
+        "quantiles": [
+          0.1,
+          0.9
+        ]
+      }
+    }
+  ],
+  "work_item": "probabilistic-adapter smoke test"
+}

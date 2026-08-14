@@ -1,0 +1,43 @@
+{
+  "artifact_paths": [
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/evidence/natural_language.json",
+    "/home/hfu_nestle/projects/commodity-forecasting/docs/findings/phase0/natural_language.md"
+  ],
+  "classification": "pass",
+  "command": ".venv/bin/python -m pytest tests/smoke/test_natural_language.py",
+  "credential_state": "not_required",
+  "data_origin": "historical synthetic weekly capability fixture; not the active PoC target contract",
+  "fixture_id": "phase0_synthetic_weekly_v1",
+  "forecast_analysis": "The requested 12-week weekly outlook was generated from 260 history-only observations.",
+  "forecast_rows": 12,
+  "leakage_controls": [
+    "exactly 260 synthetic weekly observations are provided as history",
+    "the 12 forecast timestamps follow the final history timestamp",
+    "cross-validation is TimeCopilot's time-series-aware implementation",
+    "no random train/test split or future target values are used"
+  ],
+  "limitations": [
+    "The weekly Coffee C wording is retained only to reproduce the historical SM-03 capability result; the active PoC contract is monthly Coffee, Arabica.",
+    "This proves the TimeCopilot query and tool contract without credentials; it does not evaluate external-provider language quality.",
+    "The deterministic response marks the baseline as accepted to satisfy TimeCopilot's output validator; it is not a performance claim."
+  ],
+  "llm_model": "FunctionModel (pydantic-ai 2.28.0)",
+  "llm_provider": "PydanticAI deterministic FunctionModel",
+  "mode": "network-smoke",
+  "model_or_adapter": "TimeCopilot.forecast/query with SeasonalNaive",
+  "network_state": "not_used",
+  "observed_result": "All four registered forecasting tools executed and the agent returned a 12-row forecast, non-empty analysis, and query-specific response.",
+  "run_id": "SM-03-2026-08-13T07:43:29Z",
+  "test_id": "SM-03",
+  "timecopilot_version": "0.0.30",
+  "timestamp_utc": "2026-08-13T07:43:29Z",
+  "tool": "TimeCopilot agent with PydanticAI FunctionModel",
+  "tool_calls": [
+    "tsfeatures_tool",
+    "cross_validation_tool",
+    "forecast_tool",
+    "detect_anomalies_tool"
+  ],
+  "user_query_response": "For the requested Coffee C 12-week weekly outlook, the agent generated 12 forecast periods and analysis.",
+  "work_item": "historical natural-language capability smoke test"
+}

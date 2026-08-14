@@ -1,0 +1,101 @@
+{
+  "artifact_paths": [
+    "docs/findings/phase1/evidence/dependency_readiness.json",
+    "docs/findings/phase1/dependency_readiness.md"
+  ],
+  "checks": {
+    "child_outside_repo": true,
+    "child_pythonpath_absent": true,
+    "cleanup_completed": true,
+    "dependency_declared": true,
+    "host_bootstrap_explicit": true,
+    "install_non_editable": true,
+    "periods_parse": true,
+    "phase0_complete": true,
+    "pip_check": true,
+    "publication_policy_present": true,
+    "raw_hash_after_matches": true,
+    "raw_hash_before_matches": true,
+    "reader_version_supported": true,
+    "repo_root_explicit": true,
+    "sheet_found": true,
+    "target_found_once": true,
+    "workbook_exists": true
+  },
+  "child_exit_code": 0,
+  "child_mode": "probe-installed",
+  "classification": "pass",
+  "cleanup_status": "pass",
+  "controller_mode": "verify-clean-install",
+  "errors": [],
+  "expected_raw_sha256": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "failed_stage": null,
+  "header_row": 5,
+  "host_pythonpath_state": "explicit_repo_src",
+  "install_mode": "non_editable",
+  "installed_project_version": "0.1.0",
+  "mode": "clean-install-readiness",
+  "period_count": 799,
+  "period_end": "2026M07",
+  "period_start": "1960M01",
+  "phase0_evidence": [
+    "docs/findings/phase0/evidence/roadmap_exit.json",
+    "docs/findings/phase0/evidence/world_bank_pink_sheet_availability.json"
+  ],
+  "publication_policy": {
+    "availability_proxy": "strict_prior_month",
+    "evaluation_label": "revised_workbook_pseudo_real_time",
+    "historical_release_timestamps_available": false,
+    "historical_vintages_available": false,
+    "limitation": "Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.",
+    "prohibited_claim": "Do not describe this evaluation as vintage-real-time."
+  },
+  "python_version": "3.13.12",
+  "pythonpath_state": "absent",
+  "raw_sha256_after": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "raw_sha256_before": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "reader_requirement": "openpyxl>=3.1,<4",
+  "repo_root": "/home/hfu_nestle/projects/commodity-forecasting",
+  "resolved_openpyxl_version": "3.1.5",
+  "run_id": "P1-01-20260814T050221Z",
+  "sanitized_command": "PYTHONPATH=/home/hfu_nestle/projects/commodity-forecasting/src /home/hfu_nestle/projects/commodity-forecasting/.venv/bin/python -m commodity_forecasting.phase1.readiness verify-clean-install --repo-root /home/hfu_nestle/projects/commodity-forecasting",
+  "schema_version": 1,
+  "sheet_name": "Monthly Prices",
+  "stage_outcomes": [
+    {
+      "exit_code": 0,
+      "sanitized_command": "/home/hfu_nestle/projects/commodity-forecasting/.venv/bin/python -m venv /tmp/commodity-forecasting-p101-yoo1zuzb/venv",
+      "stage": "create_environment",
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "sanitized_command": "/tmp/commodity-forecasting-p101-yoo1zuzb/venv/bin/python -m pip install --disable-pip-version-check /tmp/commodity-forecasting-p101-yoo1zuzb/source",
+      "stage": "install_project",
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "sanitized_command": "/tmp/commodity-forecasting-p101-yoo1zuzb/venv/bin/python -m pip check",
+      "stage": "pip_check",
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "sanitized_command": "/tmp/commodity-forecasting-p101-yoo1zuzb/venv/bin/python -m commodity_forecasting.phase1.readiness probe-installed --repo-root /home/hfu_nestle/projects/commodity-forecasting --result-path /tmp/commodity-forecasting-p101-yoo1zuzb/child-result.json",
+      "stage": "probe_installed",
+      "status": "pass"
+    },
+    {
+      "exit_code": 0,
+      "sanitized_command": "cleanup temporary environment",
+      "stage": "cleanup",
+      "status": "pass"
+    }
+  ],
+  "target_column": "Coffee, Arabica",
+  "target_column_index": 13,
+  "task_id": "P1-01",
+  "timestamp_utc": "2026-08-14T05:02:21Z",
+  "working_directory_class": "outside_repository"
+}

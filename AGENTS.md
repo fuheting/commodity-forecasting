@@ -4,9 +4,9 @@ These instructions apply to the entire repository.
 
 ## Project Context
 
-This repository is a proof-of-concept commodity futures forecasting project built around TimeCopilot.
+This repository is a proof-of-concept commodity price forecasting project built around TimeCopilot.
 
-The initial use case is weekly forecasting of ICE Coffee C continuous front-month price. The authoritative PoC boundary is defined in `docs/poc_scope.md`.
+The active PoC use case is monthly forecasting of the World Bank Pink Sheet `Coffee, Arabica` price series. The authoritative PoC boundary is defined in `docs/poc_scope.md`.
 
 Read before implementation:
 

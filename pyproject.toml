@@ -1,1 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "commodity-forecasting"
+version = "0.1.0"
+description = "Commodity price forecasting proof of concept with TimeCopilot."
+requires-python = ">=3.10"
+dependencies = ["openpyxl>=3.1,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+smoke = ["pytest>=8", "timecopilot==0.0.30"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.mypy]
+ignore_missing_imports = true

@@ -1,0 +1,60 @@
+{
+  "run_id": "SM-04-WB-PINK-SHEET-20260813T060210Z",
+  "test_id": "SM-04-SUPPLEMENT",
+  "work_item": "World Bank Pink Sheet Arabica proxy and covariate availability verification",
+  "timestamp_utc": "2026-08-13T06:02:10Z",
+  "mode": "network-smoke",
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+  "download_outcome": "success",
+  "credential_state": "no datasource credentials supplied",
+  "local_raw_path": "data/raw/world_bank/pink_sheet/CMO-Historical-Data-Monthly.xlsx",
+  "byte_count": 577979,
+  "sha256": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "workbook_updated_on": "2026-08-04",
+  "sheets": [
+    "AFOSHEET",
+    "Monthly Prices",
+    "Monthly Indices",
+    "Description",
+    "Index Weights"
+  ],
+  "monthly_price_series_count": 71,
+  "complete_monthly_price_series_count": 48,
+  "monthly_observation_count": 799,
+  "history_start": "1960M01",
+  "history_end": "2026M07",
+  "arabica": {
+    "column": "Coffee, Arabica",
+    "unit": "$/kg",
+    "row_count": 799,
+    "missing_count": 0,
+    "latest_value": 7.91,
+    "series_identity_proven": true,
+    "settlement_field_proven": false
+  },
+  "candidate_covariate_columns": [
+    "Coffee, Robusta",
+    "Cocoa",
+    "Tea, avg 3 auctions",
+    "Crude oil, average",
+    "Sugar, world",
+    "Urea"
+  ],
+  "candidate_covariate_common_history": "1960M01 through 2026M07 with zero missing monthly values for the listed candidates",
+  "availability_classification": "past_only",
+  "leakage_controls": [
+    "the downloaded workbook is preserved unchanged in the raw layer",
+    "monthly observations are not considered available before the workbook publication date",
+    "candidate covariates are classified past_only rather than known_future",
+    "no monthly series is upsampled or represented as weekly settlement data"
+  ],
+  "classification": "pass_as_monthly_arabica_proxy",
+  "coffee_c_contract_result": "fail",
+  "observed_result": "The credential-free official workbook downloaded successfully. It contains a complete monthly Coffee, Arabica series and multiple complete candidate covariate series, but no ICE Coffee C settlement or continuous-front-month field.",
+  "artifact_paths": [
+    "data/raw/world_bank/pink_sheet/CMO-Historical-Data-Monthly.xlsx",
+    "data/raw/world_bank/pink_sheet/source_metadata.json",
+    "docs/findings/phase0/world_bank_pink_sheet_availability.md",
+    "docs/findings/phase0/evidence/world_bank_pink_sheet_availability.json"
+  ]
+}

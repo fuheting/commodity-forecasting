@@ -1,0 +1,78 @@
+{
+  "dataset_id": "world_bank_pink_sheet_monthly_2026_08_04",
+  "source_provider": "World Bank Prospects Group",
+  "source_locator": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+  "downloaded_at_utc": "2026-08-13T06:02:10Z",
+  "local_file": "CMO-Historical-Data-Monthly.xlsx",
+  "byte_count": 577979,
+  "sha256": "7902a77505ebdc5d202ce65f666c2ee1b04b626f042d7738ed3e6f7d112c8433",
+  "license_or_usage_note": "World Bank Commodity Prices - History and Projections is classified Public and licensed CC BY 4.0 in the World Bank Data Catalog.",
+  "workbook_updated_on": "2026-08-04",
+  "workbook_sheets": [
+    "AFOSHEET",
+    "Monthly Prices",
+    "Monthly Indices",
+    "Description",
+    "Index Weights"
+  ],
+  "monthly_observation_start": "1960M01",
+  "monthly_observation_end": "2026M07",
+  "monthly_observation_count": 799,
+  "monthly_price_series_count": 71,
+  "complete_monthly_price_series_count": 48,
+  "arabica_target": {
+    "workbook_column": "Coffee, Arabica",
+    "unit": "$/kg",
+    "observation_count": 799,
+    "missing_count": 0,
+    "latest_observation": 7.91,
+    "latest_period": "2026M07",
+    "semantic_role": "monthly Arabica indicator-price proxy; not ICE Coffee C settlement"
+  },
+  "candidate_covariates": [
+    {
+      "workbook_column": "Coffee, Robusta",
+      "unit": "$/kg",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    },
+    {
+      "workbook_column": "Cocoa",
+      "unit": "$/kg",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    },
+    {
+      "workbook_column": "Tea, avg 3 auctions",
+      "unit": "$/kg",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    },
+    {
+      "workbook_column": "Crude oil, average",
+      "unit": "$/bbl",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    },
+    {
+      "workbook_column": "Sugar, world",
+      "unit": "$/kg",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    },
+    {
+      "workbook_column": "Urea",
+      "unit": "$/mt",
+      "observation_count": 799,
+      "missing_count": 0,
+      "availability_class": "past_only"
+    }
+  ],
+  "availability_rule": "The downloaded workbook was updated on 2026-08-04 and contains observations through 2026M07. Historical release timestamps are not embedded in the workbook, so same-month values must not be treated as known before publication.",
+  "raw_data_unchanged": true
+}
