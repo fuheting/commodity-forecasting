@@ -108,8 +108,8 @@ The Pink Sheet workbook does not provide future covariates, so the active PoC di
 At forecast origin `T`, model inputs must not contain information that would only become available after `T`.
 
 - Use walk-forward or rolling-origin validation.
-- Do not use random train/test splits.
-- Fit learned transforms only on the training window.
+- Do not use random data splits.
+- For zero-shot Time Series Foundation Model inference, do not fit, fine-tune, calibrate, or update model weights; if a learned preprocessing transform is introduced later, fit it only on the historic-context window.
 - Lagged and rolling features may use only current and past observations.
 - Centered rolling windows are prohibited.
 - Do not backward-fill past observations using future values.
