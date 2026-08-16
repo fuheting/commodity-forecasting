@@ -100,7 +100,7 @@ Do not start P1-05 until the P1-04 approval record exists. Do not mark Phase 1 c
 
 **Context:** Local loading does not establish edge feasibility or TimeCopilot adapter support. Candidate eligibility must be established before runtime use.
 
-**Scope:** Screen artifact variants for Chronos/Chronos-2, FlowState, Moirai, PatchTST-FM, Sundial, TabPFN, TiRex/TiRex-2, TimesFM, and Toto/Toto-2. Record T0 as excluded because the current documentation does not establish an open-source implementation, and TimeGPT as excluded because its integration is API-backed.
+**Scope:** Screen artifact variants for Chronos, Chronos-2, FlowState, Moirai, PatchTST-FM, Sundial, TabPFN, TiRex/TiRex-2, TimesFM, and Toto/Toto-2. Record T0 as excluded because the current documentation does not establish an open-source implementation, and TimeGPT as excluded because its integration is API-backed.
 
 For each variant record: official source URL; source version/date; retrieval timestamp; applicable installed package versions; artifact identity and size; runtime/framework; device support; offline support; documented memory/VRAM requirement; fit against the recorded 16 GB GPU target; license/usage constraints; monthly history-only 60x3 support; TimeCopilot 0.0.30 adapter exposure; probabilistic output kind; result; notes; unknowns.
 

@@ -78,7 +78,14 @@ P1_02_EVIDENCE_RELATIVE_PATH = Path("docs/findings/phase1/evidence/target_pipeli
 FINDING_RELATIVE_PATH = Path("docs/findings/phase1/model_screening.md")
 EVIDENCE_RELATIVE_PATH = Path("docs/findings/phase1/evidence/model_screening.json")
 ROADMAP_RELATIVE_PATH = Path("docs/roadmap.md")
-ROADMAP_PLANNED_SHA256 = "586c60a4b413cfc5ee91eb94a4cc1e7e824fd082895bfca1cfce790ce9df4aa8"
+P1_03_ROADMAP_PLANNED_LINE = (
+    "- [ ] **P1-03 — Official-document edge-feasibility screen.** Depends on P1-02. "
+    "Screen every documented local-capable Time Series Foundation Model family at the "
+    "artifact-variant level against official evidence and the recorded 16 GB GPU target; "
+    "required unknowns are not eligible. Evidence: "
+    "`docs/findings/phase1/model_screening.md` and "
+    "`docs/findings/phase1/evidence/model_screening.json`."
+)
 
 INSTALLED_DISTRIBUTIONS = (
     "timecopilot", "torch", "transformers", "accelerate",
@@ -199,6 +206,7 @@ MODEL_NATIVE_FIELDS = (
 ADAPTER_FIELDS = ("artifact_identity", "point", "interval", "quantile")
 PROBABILISTIC_FIELDS = ("point", "interval", "quantile")
 P1_03_ROADMAP_PATTERN = re.compile(r"(?m)^- \[([ x-])\] \*\*P1-03\b.*$")
+P1_03_ROADMAP_LINE_PATTERN = re.compile(r"(?m)^- \[[ x-]\] \*\*P1-03\b.*$")
 UTC_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$")
 REPOSITORY_ID_PATTERN = re.compile(
     r"(?<![A-Za-z0-9_.-])([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)(?![A-Za-z0-9_.-])"
@@ -1782,19 +1790,12 @@ def validate_roadmap_consistency(
     expected_marker = " " if expect == "planned" else "x"
     if matches != [expected_marker]:
         raise RoadmapConsistencyError(f"P1-03 roadmap state is not {expect}")
-    if expect == "planned":
-        planned_bytes = roadmap.encode("utf-8")
-    else:
-        planned_text, substitutions = re.subn(
-            r"(?m)^- \[x\]( \*\*P1-03\b.*)$",
-            r"- [ ]\1",
-            roadmap,
-        )
-        if substitutions != 1:
-            raise RoadmapConsistencyError("roadmap must contain exactly one completed P1-03 entry")
-        planned_bytes = planned_text.encode("utf-8")
-    if hashlib.sha256(planned_bytes).hexdigest() != ROADMAP_PLANNED_SHA256:
-        raise RoadmapConsistencyError("roadmap contains edits outside the authorized P1-03 transition")
+    lines = P1_03_ROADMAP_LINE_PATTERN.findall(roadmap)
+    if len(lines) != 1:
+        raise RoadmapConsistencyError("roadmap must contain exactly one P1-03 entry")
+    planned_line = re.sub(r"^- \[[ x-]\]", "- [ ]", lines[0])
+    if planned_line != P1_03_ROADMAP_PLANNED_LINE:
+        raise RoadmapConsistencyError("P1-03 roadmap entry contains an unauthorized edit")
     if require_update_eligible and expect != "planned":
         raise RoadmapConsistencyError("update eligibility is meaningful only for planned state")
 

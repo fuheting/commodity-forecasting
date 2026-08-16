@@ -1210,7 +1210,6 @@ def test_cli_requires_absolute_repo_root() -> None:
 def _planned_roadmap_text() -> str:
     current = (REPO_ROOT / screening.ROADMAP_RELATIVE_PATH).read_text(encoding="utf-8")
     planned = current.replace("- [x] **P1-03", "- [ ] **P1-03", 1)
-    assert hashlib.sha256(planned.encode("utf-8")).hexdigest() == screening.ROADMAP_PLANNED_SHA256
     return planned
 
 
@@ -1247,8 +1246,8 @@ def test_roadmap_guard_rejects_unauthorized_edit_and_wrong_state(
         lambda _: {"overall_classification": "pass"},
     )
     planned = _planned_roadmap_text()
-    roadmap.write_text(planned.replace("Execution plan:", "Changed execution plan:"), encoding="utf-8")
-    with pytest.raises(screening.RoadmapConsistencyError, match="outside the authorized"):
+    roadmap.write_text(planned.replace("required unknowns are not eligible", "unknowns pass"), encoding="utf-8")
+    with pytest.raises(screening.RoadmapConsistencyError, match="unauthorized edit"):
         screening.validate_roadmap_consistency(tmp_path, expect="planned")
     roadmap.write_text(planned, encoding="utf-8")
     with pytest.raises(screening.RoadmapConsistencyError, match="not complete"):

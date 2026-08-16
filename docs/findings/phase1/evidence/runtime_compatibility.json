@@ -1,0 +1,1920 @@
+{
+  "approval_decision_id": "P1-04-20260815T031954Z",
+  "approval_evidence_sha256": "9207e6be804b172b2ae57586f5b74a6e7e09127839483124c49ce8f4952e5e61",
+  "approved_variant_ids": [
+    "amazon/chronos-2",
+    "autogluon/chronos-2-synth",
+    "autogluon/chronos-2-small",
+    "google/timesfm-1.0-200m-pytorch",
+    "google/timesfm-2.5-200m-transformers"
+  ],
+  "candidate_records": [
+    {
+      "approved_order": 0,
+      "classification": "pass",
+      "connected_acquisition_result": "cache_hit",
+      "contract_completeness": true,
+      "device_observation": [
+        "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU"
+      ],
+      "duration_seconds": 61.085616,
+      "errors": [],
+      "memory_observation": {
+        "device_class": "cuda",
+        "peak": 511798272,
+        "required_stages": [
+          "connected_point",
+          "offline_point",
+          "connected_interval",
+          "offline_interval",
+          "connected_quantiles",
+          "offline_quantiles"
+        ],
+        "source": "torch_cuda_max_memory_allocated",
+        "unit": "bytes"
+      },
+      "offline_replay_result": "success",
+      "output_columns": [
+        "P105",
+        "P105-hi-80",
+        "P105-lo-80",
+        "P105-q-10",
+        "P105-q-20",
+        "P105-q-30",
+        "P105-q-40",
+        "P105-q-50",
+        "P105-q-60",
+        "P105-q-70",
+        "P105-q-80",
+        "P105-q-90",
+        "ds",
+        "unique_id"
+      ],
+      "output_shape": [
+        3,
+        3
+      ],
+      "point_output": true,
+      "probabilistic_output_kind": "both",
+      "selection_key": [
+        0,
+        511798272,
+        0
+      ],
+      "stage_history": [
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 12.04414,
+          "ended_at_utc": "2026-08-16T06:40:52Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "connected_point",
+          "started_at_utc": "2026-08-16T06:40:40Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.551056,
+          "ended_at_utc": "2026-08-16T06:41:07Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "connected_interval",
+          "started_at_utc": "2026-08-16T06:40:56Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.438298,
+          "ended_at_utc": "2026-08-16T06:41:22Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "connected_quantiles",
+          "started_at_utc": "2026-08-16T06:41:10Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.73432,
+          "ended_at_utc": "2026-08-16T06:41:34Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "offline_point",
+          "started_at_utc": "2026-08-16T06:41:25Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.624551,
+          "ended_at_utc": "2026-08-16T06:41:46Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "offline_interval",
+          "started_at_utc": "2026-08-16T06:41:37Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.693251,
+          "ended_at_utc": "2026-08-16T06:41:57Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 511798272,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "offline_quantiles",
+          "started_at_utc": "2026-08-16T06:41:49Z",
+          "variant_id": "amazon/chronos-2",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        }
+      ],
+      "variant_id": "amazon/chronos-2"
+    },
+    {
+      "approved_order": 1,
+      "classification": "pass",
+      "connected_acquisition_result": "cache_hit",
+      "contract_completeness": true,
+      "device_observation": [
+        "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU"
+      ],
+      "duration_seconds": 61.356427,
+      "errors": [],
+      "memory_observation": {
+        "device_class": "cuda",
+        "peak": 509765632,
+        "required_stages": [
+          "connected_point",
+          "offline_point",
+          "connected_interval",
+          "offline_interval",
+          "connected_quantiles",
+          "offline_quantiles"
+        ],
+        "source": "torch_cuda_max_memory_allocated",
+        "unit": "bytes"
+      },
+      "offline_replay_result": "success",
+      "output_columns": [
+        "P105",
+        "P105-hi-80",
+        "P105-lo-80",
+        "P105-q-10",
+        "P105-q-20",
+        "P105-q-30",
+        "P105-q-40",
+        "P105-q-50",
+        "P105-q-60",
+        "P105-q-70",
+        "P105-q-80",
+        "P105-q-90",
+        "ds",
+        "unique_id"
+      ],
+      "output_shape": [
+        3,
+        3
+      ],
+      "point_output": true,
+      "probabilistic_output_kind": "both",
+      "selection_key": [
+        0,
+        509765632,
+        1
+      ],
+      "stage_history": [
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 12.477906,
+          "ended_at_utc": "2026-08-16T06:42:13Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "connected_point",
+          "started_at_utc": "2026-08-16T06:42:01Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.41958,
+          "ended_at_utc": "2026-08-16T06:42:28Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "connected_interval",
+          "started_at_utc": "2026-08-16T06:42:16Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.442999,
+          "ended_at_utc": "2026-08-16T06:42:42Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "connected_quantiles",
+          "started_at_utc": "2026-08-16T06:42:31Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.639275,
+          "ended_at_utc": "2026-08-16T06:42:54Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "offline_point",
+          "started_at_utc": "2026-08-16T06:42:45Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.706016,
+          "ended_at_utc": "2026-08-16T06:43:06Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "offline_interval",
+          "started_at_utc": "2026-08-16T06:42:57Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.670651,
+          "ended_at_utc": "2026-08-16T06:43:17Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 509765632,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "offline_quantiles",
+          "started_at_utc": "2026-08-16T06:43:09Z",
+          "variant_id": "autogluon/chronos-2-synth",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        }
+      ],
+      "variant_id": "autogluon/chronos-2-synth"
+    },
+    {
+      "approved_order": 2,
+      "classification": "pass",
+      "connected_acquisition_result": "cache_hit",
+      "contract_completeness": true,
+      "device_observation": [
+        "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU"
+      ],
+      "duration_seconds": 59.425368,
+      "errors": [],
+      "memory_observation": {
+        "device_class": "cuda",
+        "peak": 145472512,
+        "required_stages": [
+          "connected_point",
+          "offline_point",
+          "connected_interval",
+          "offline_interval",
+          "connected_quantiles",
+          "offline_quantiles"
+        ],
+        "source": "torch_cuda_max_memory_allocated",
+        "unit": "bytes"
+      },
+      "offline_replay_result": "success",
+      "output_columns": [
+        "P105",
+        "P105-hi-80",
+        "P105-lo-80",
+        "P105-q-10",
+        "P105-q-20",
+        "P105-q-30",
+        "P105-q-40",
+        "P105-q-50",
+        "P105-q-60",
+        "P105-q-70",
+        "P105-q-80",
+        "P105-q-90",
+        "ds",
+        "unique_id"
+      ],
+      "output_shape": [
+        3,
+        3
+      ],
+      "point_output": true,
+      "probabilistic_output_kind": "both",
+      "selection_key": [
+        0,
+        145472512,
+        2
+      ],
+      "stage_history": [
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.406381,
+          "ended_at_utc": "2026-08-16T06:43:32Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "connected_point",
+          "started_at_utc": "2026-08-16T06:43:20Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.265972,
+          "ended_at_utc": "2026-08-16T06:43:46Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "connected_interval",
+          "started_at_utc": "2026-08-16T06:43:35Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 11.162474,
+          "ended_at_utc": "2026-08-16T06:44:01Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "connected_quantiles",
+          "started_at_utc": "2026-08-16T06:43:49Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.537415,
+          "ended_at_utc": "2026-08-16T06:44:12Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105"
+          ],
+          "output_shape": [
+            3,
+            3
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {},
+          "stage": "offline_point",
+          "started_at_utc": "2026-08-16T06:44:04Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.494943,
+          "ended_at_utc": "2026-08-16T06:44:24Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-lo-80",
+            "P105-hi-80"
+          ],
+          "output_shape": [
+            3,
+            5
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "offline_interval",
+          "started_at_utc": "2026-08-16T06:44:15Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 8.558183,
+          "ended_at_utc": "2026-08-16T06:44:36Z",
+          "error": null,
+          "exception_class": null,
+          "failure_classification": "none",
+          "load_success": true,
+          "local_only_mechanism": "environment_flags",
+          "memory": {
+            "device_class": "cuda",
+            "peak": 145472512,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "offline_flags_no_proxy",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "success",
+          "output_columns": [
+            "unique_id",
+            "ds",
+            "P105",
+            "P105-q-10",
+            "P105-q-20",
+            "P105-q-30",
+            "P105-q-40",
+            "P105-q-50",
+            "P105-q-60",
+            "P105-q-70",
+            "P105-q-80",
+            "P105-q-90"
+          ],
+          "output_shape": [
+            3,
+            12
+          ],
+          "output_timestamps": [
+            "2026-08-01",
+            "2026-09-01",
+            "2026-10-01"
+          ],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "offline_quantiles",
+          "started_at_utc": "2026-08-16T06:44:27Z",
+          "variant_id": "autogluon/chronos-2-small",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        }
+      ],
+      "variant_id": "autogluon/chronos-2-small"
+    },
+    {
+      "approved_order": 3,
+      "classification": "fail",
+      "connected_acquisition_result": "cache_hit",
+      "contract_completeness": false,
+      "device_observation": [],
+      "duration_seconds": 28.718983,
+      "errors": [
+        {
+          "error": "shape '[1, -1, 32]' is invalid for input of size 60",
+          "exception_class": "RuntimeError",
+          "stage": "connected_point"
+        },
+        {
+          "error": "TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286",
+          "exception_class": "ValueError",
+          "stage": "connected_interval"
+        },
+        {
+          "error": "shape '[1, -1, 32]' is invalid for input of size 60",
+          "exception_class": "RuntimeError",
+          "stage": "connected_quantiles"
+        },
+        {
+          "error": "connected_point did not succeed",
+          "exception_class": null,
+          "stage": "offline_point"
+        },
+        {
+          "error": "connected_interval did not succeed",
+          "exception_class": null,
+          "stage": "offline_interval"
+        },
+        {
+          "error": "connected_quantiles did not succeed",
+          "exception_class": null,
+          "stage": "offline_quantiles"
+        }
+      ],
+      "memory_observation": null,
+      "offline_replay_result": "incomplete",
+      "output_columns": [],
+      "output_shape": null,
+      "point_output": false,
+      "probabilistic_output_kind": "none",
+      "selection_key": null,
+      "stage_history": [
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 10.764166,
+          "ended_at_utc": "2026-08-16T06:44:50Z",
+          "error": "shape '[1, -1, 32]' is invalid for input of size 60",
+          "exception_class": "RuntimeError",
+          "failure_classification": "runtime_failed",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 814281216,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "failed",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {},
+          "stage": "connected_point",
+          "started_at_utc": "2026-08-16T06:44:39Z",
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "unknown:cuda_visible_without_observed_allocation",
+          "device_policy": "gpu_required",
+          "duration_seconds": 7.610391,
+          "ended_at_utc": "2026-08-16T06:45:00Z",
+          "error": "TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286",
+          "exception_class": "ValueError",
+          "failure_classification": "adapter_unsupported",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 0,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "unsupported",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "connected_interval",
+          "started_at_utc": "2026-08-16T06:44:53Z",
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "cache_hit",
+          "device": "cuda:0:NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU",
+          "device_policy": "gpu_required",
+          "duration_seconds": 10.344426,
+          "ended_at_utc": "2026-08-16T06:45:14Z",
+          "error": "shape '[1, -1, 32]' is invalid for input of size 60",
+          "exception_class": "RuntimeError",
+          "failure_classification": "runtime_failed",
+          "load_success": true,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 814281216,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "failed",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "connected_quantiles",
+          "started_at_utc": "2026-08-16T06:45:03Z",
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_point did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {},
+          "stage": "offline_point",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_interval did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "offline_interval",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_quantiles did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "offline_quantiles",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-1.0-200m-pytorch",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        }
+      ],
+      "variant_id": "google/timesfm-1.0-200m-pytorch"
+    },
+    {
+      "approved_order": 4,
+      "classification": "unsupported",
+      "connected_acquisition_result": "unknown",
+      "contract_completeness": false,
+      "device_observation": [],
+      "duration_seconds": 22.747947,
+      "errors": [
+        {
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "stage": "connected_point"
+        },
+        {
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "stage": "connected_interval"
+        },
+        {
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "stage": "connected_quantiles"
+        },
+        {
+          "error": "connected_point did not succeed",
+          "exception_class": null,
+          "stage": "offline_point"
+        },
+        {
+          "error": "connected_interval did not succeed",
+          "exception_class": null,
+          "stage": "offline_interval"
+        },
+        {
+          "error": "connected_quantiles did not succeed",
+          "exception_class": null,
+          "stage": "offline_quantiles"
+        }
+      ],
+      "memory_observation": null,
+      "offline_replay_result": "incomplete",
+      "output_columns": [],
+      "output_shape": null,
+      "point_output": false,
+      "probabilistic_output_kind": "none",
+      "selection_key": null,
+      "stage_history": [
+        {
+          "acquisition_provenance": "unknown",
+          "device": "unknown:cuda_visible_without_observed_allocation",
+          "device_policy": "gpu_required",
+          "duration_seconds": 7.598517,
+          "ended_at_utc": "2026-08-16T06:45:24Z",
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "failure_classification": "adapter_unsupported",
+          "load_success": false,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 0,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "unsupported",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {},
+          "stage": "connected_point",
+          "started_at_utc": "2026-08-16T06:45:17Z",
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "unknown",
+          "device": "unknown:cuda_visible_without_observed_allocation",
+          "device_policy": "gpu_required",
+          "duration_seconds": 7.584647,
+          "ended_at_utc": "2026-08-16T06:45:35Z",
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "failure_classification": "adapter_unsupported",
+          "load_success": false,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 0,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "unsupported",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "connected_interval",
+          "started_at_utc": "2026-08-16T06:45:28Z",
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": "unknown",
+          "device": "unknown:cuda_visible_without_observed_allocation",
+          "device_policy": "gpu_required",
+          "duration_seconds": 7.564783,
+          "ended_at_utc": "2026-08-16T06:45:46Z",
+          "error": "TimesFM only supports pytorch models, if you'd like to use jax, please open an issue",
+          "exception_class": "ValueError",
+          "failure_classification": "adapter_unsupported",
+          "load_success": false,
+          "local_only_mechanism": null,
+          "memory": {
+            "device_class": "cuda",
+            "peak": 0,
+            "source": "torch_cuda_max_memory_allocated",
+            "unit": "bytes"
+          },
+          "network_policy": "http_proxy_without_socks_fallback",
+          "offline_flags": {},
+          "outcome": "unsupported",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "connected_quantiles",
+          "started_at_utc": "2026-08-16T06:45:38Z",
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_point did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {},
+          "stage": "offline_point",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_interval did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "level": [
+              80
+            ]
+          },
+          "stage": "offline_interval",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        },
+        {
+          "acquisition_provenance": null,
+          "device": null,
+          "device_policy": "runtime_default",
+          "duration_seconds": null,
+          "ended_at_utc": null,
+          "error": "connected_quantiles did not succeed",
+          "exception_class": null,
+          "failure_classification": "not_run_due_to_prior_failure",
+          "load_success": false,
+          "local_only_mechanism": "environment_flags",
+          "memory": null,
+          "network_policy": "runtime_default",
+          "offline_flags": {
+            "HF_HUB_OFFLINE": "1",
+            "TRANSFORMERS_OFFLINE": "1"
+          },
+          "outcome": "not_run_due_to_prior_failure",
+          "output_columns": [],
+          "output_shape": null,
+          "output_timestamps": [],
+          "request_parameters": {
+            "quantiles": [
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9
+            ]
+          },
+          "stage": "offline_quantiles",
+          "started_at_utc": null,
+          "variant_id": "google/timesfm-2.5-200m-transformers",
+          "window": {
+            "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+            "expected_forecast_timestamps": [
+              "2026-08-01",
+              "2026-09-01",
+              "2026-10-01"
+            ],
+            "history_end": "2026-07-01",
+            "history_start": "2021-08-01",
+            "row_count": 60
+          }
+        }
+      ],
+      "variant_id": "google/timesfm-2.5-200m-transformers"
+    }
+  ],
+  "checks": {
+    "approval_gate_enforced": true,
+    "exact_60x3_window": true,
+    "history_only": true,
+    "independent_probabilistic_requests": true,
+    "offline_replay_flags": true,
+    "selector_deterministic": true,
+    "serial_candidate_execution": true
+  },
+  "errors": [],
+  "generated_at_utc": "2026-08-16T06:45:48Z",
+  "matrix_completeness": "complete",
+  "run_id": "P1-05-20260816T064548Z",
+  "schema_version": 1,
+  "selected_reference": "autogluon/chronos-2-small",
+  "selection_basis": "smallest_verified_common_peak_then_p1_04_order",
+  "selector_executed": true,
+  "task_id": "P1-05",
+  "task_outcome": "pass",
+  "window": {
+    "digest": "0fdc6afe8ab8d0e5f2737c5306b221cef1e8ac2b61edb45f2d1aa45bcfea75f3",
+    "expected_forecast_timestamps": [
+      "2026-08-01",
+      "2026-09-01",
+      "2026-10-01"
+    ],
+    "history_end": "2026-07-01",
+    "history_start": "2021-08-01",
+    "row_count": 60
+  }
+}
