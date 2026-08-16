@@ -10,15 +10,14 @@ Authoritative inputs:
 - `docs/poc_scope.md`
 - `docs/data_scope.md`
 - `docs/timecopilot_capabilities.md`
-- `.omx/specs/deep-interview-phase1-roadmap-execution-plan.md`
-- `.omx/plans/prd-phase1-history-only-forecasting.md`
-- `.omx/plans/test-spec-phase1-history-only-forecasting.md`
+
+Generated `.omx` planning artifacts are historical workflow records, not authoritative inputs for this versioned execution contract.
 
 ## Fixed Contract
 
 - Target: World Bank Pink Sheet `Coffee, Arabica`, monthly, `$/kg`.
 - Model input: `unique_id | ds | y`.
-- Evaluation: exactly 12 rolling origins, one-month step, exactly 60 training months, exactly 3 forecast months.
+- Evaluation: exactly 3 rolling origins, one-month step, exactly 60 historic-context months, exactly 3 forecast months.
 - Point metrics: MAE and RMSE.
 - Probabilistic metrics: empirical coverage and mean width for intervals; mean pinball loss per quantile and empirical quantile coverage for quantiles.
 - Validation is revised-workbook pseudo-real-time, not vintage-real-time. The publication-availability policy and revision limitation must be explicit.
@@ -165,15 +164,15 @@ For each variant record: official source URL; source version/date; retrieval tim
 
 **Exit criteria:** At least one approved variant passes the full runtime contract and one evidence-backed reference is selected. Otherwise P1-05 remains incomplete.
 
-**Non-goals:** Custom adapters, broad benchmarking, model-quality selection, or training.
+**Non-goals:** Custom adapters, broad benchmarking, model-quality selection, model fitting, fine-tuning, or weight updates.
 
 ## P1-06 — Monthly Rolling-Origin Forecasting
 
 **Context:** Phase 1 requires leakage-safe historical evidence beyond a single forecast.
 
-**Scope:** Implement monthly window generation and run the reference model at exactly 12 origins, one month apart, each with exactly 60 training months and 3 forecast months. Persist origin, cutoff, training span, forecast span, actuals, point forecasts, and supported probabilistic outputs.
+**Scope:** Implement monthly window generation and run the reference model at exactly 3 origins, one month apart, each with exactly 60 historic-context months and 3 forecast months. Persist origin, cutoff, historic-context span, forecast span, actuals, point forecasts, and supported probabilistic outputs.
 
-**Constraints:** History only. No reuse of the weekly Phase 0 helper unchanged. Apply the P1-01 publication policy. Label the run revised-workbook pseudo-real-time and record the missing-vintage limitation.
+**Constraints:** History only. The Time Series Foundation Model is used zero-shot: provide the historic context for inference without per-origin model fitting, fine-tuning, calibration, or weight updates. No reuse of the weekly Phase 0 helper unchanged. Apply the P1-01 publication policy. Label the run revised-workbook pseudo-real-time and record the missing-vintage limitation.
 
 **Dependencies:** P1-05 must pass.
 
@@ -186,9 +185,9 @@ For each variant record: official source URL; source version/date; retrieval tim
 - `docs/findings/phase1/rolling_origin.md`
 - `docs/findings/phase1/evidence/rolling_origin.json`
 
-**Tests:** Exactly 12 origins; one-month step; 60 training rows; 3 future rows; calendar-month continuity; train end precedes forecast start; no post-origin inputs; deterministic schedule and serialized schema.
+**Tests:** Exactly 3 origins; one-month step; 60 historic-context rows; 3 future rows; calendar-month continuity; historic-context end precedes forecast start; no post-origin inputs; no per-origin fitting or weight updates; deterministic schedule and serialized schema.
 
-**Exit criteria:** All 12 runs pass the window and output contracts and the artifacts record their cutoffs, spans, probabilistic form, and vintage limitation.
+**Exit criteria:** All 3 runs pass the window and output contracts and the artifacts record their cutoffs, historic-context and forecast spans, probabilistic form, frozen zero-shot/no-weight-update status, and vintage limitation.
 
 **Non-goals:** Covariate backtests, ensembles, tuning, or additional origin schedules.
 
@@ -211,7 +210,7 @@ For each variant record: official source URL; source version/date; retrieval tim
 
 **Tests:** Hand-calculated MAE/RMSE; interval coverage and width; quantile pinball loss and coverage; per-horizon and aggregate grouping; missing/duplicate forecast failures; no threshold field.
 
-**Exit criteria:** The frozen metric set is reproducibly reported for every available required output and traceable to the 12-origin artifact.
+**Exit criteria:** The frozen metric set is reproducibly reported for every available required output and traceable to the 3-origin artifact.
 
 **Non-goals:** A performance pass threshold, candidate ranking, or model changes.
 
