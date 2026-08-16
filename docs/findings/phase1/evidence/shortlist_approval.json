@@ -1,0 +1,115 @@
+{
+  "accepted_unknown_risk_variant_ids": [
+    "amazon/chronos-2",
+    "autogluon/chronos-2-synth",
+    "autogluon/chronos-2-small",
+    "google/timesfm-1.0-200m-pytorch",
+    "google/timesfm-2.5-200m-transformers"
+  ],
+  "approval_actor": "user",
+  "approval_basis": "explicit_unknown_risk_acceptance",
+  "approval_statements": [
+    "I approve these variants with accepted unknown risks.",
+    "I approve autogluon/chronos-2-synth.",
+    "No, proceed with the five previously approved variant. The unknown risk is their actual edge feasbility in terms of loading weights on the local machine, which is the recorded task for P1-05"
+  ],
+  "approved_at_utc": "2026-08-15T03:19:54Z",
+  "approved_variant_ids": [
+    "amazon/chronos-2",
+    "autogluon/chronos-2-synth",
+    "autogluon/chronos-2-small",
+    "google/timesfm-1.0-200m-pytorch",
+    "google/timesfm-2.5-200m-transformers"
+  ],
+  "checks": {
+    "exact_variant_ids": true,
+    "excluded_variants_rejected": true,
+    "p1_03_pass": true,
+    "p1_03_valid": true,
+    "roadmap_complete": true,
+    "runtime_gate_enabled": true,
+    "screening_hash_matches": true,
+    "stable_order": true,
+    "unknown_risks_explicitly_accepted": true
+  },
+  "classification": "approved",
+  "decision_id": "P1-04-20260815T031954Z",
+  "errors": [],
+  "excluded_variants": [
+    {
+      "canonical_variant_id": "theforecastingcompany/t0-alpha",
+      "notes": [
+        "Fixed exclusion retained for the user-specified rationale.",
+        "Source-timing conflict: current upstream now publishes open weights and source code, but this task must not admit T0."
+      ]
+    },
+    {
+      "canonical_variant_id": "TimeGPT",
+      "notes": [
+        "Excluded because the TimeCopilot integration is API-backed and requires a Nixtla API key.",
+        "No downloadable checkpoint inventory is documented."
+      ]
+    }
+  ],
+  "execution_authorized": true,
+  "notes": [
+    "P1-03 unknown/ineligible is an evidence state, not proof of runtime infeasibility.",
+    "The user explicitly accepted the recorded unknown risks for only the ordered variants above.",
+    "The accepted unknown risk is actual edge feasibility when loading weights on the local machine.",
+    "P1-05 must test that compatibility without adding, reordering, or substituting variants."
+  ],
+  "schema_version": 1,
+  "screening_counts": {
+    "blocked": 0,
+    "eligible": 0,
+    "excluded": 2,
+    "ineligible": 0,
+    "unknown/ineligible": 43
+  },
+  "screening_eligible_variant_ids": [],
+  "screening_evidence_path": "docs/findings/phase1/evidence/model_screening.json",
+  "screening_evidence_sha256": "db8a16f556821552aa3d0d01f370430d96fbdab3a09b25b3d497843659daa4d0",
+  "screening_overall_classification": "pass",
+  "screening_run_id": "P1-03-20260814T142444Z",
+  "task_id": "P1-04",
+  "unapproved_unknown_variant_ids": [
+    "amazon/chronos-bolt-tiny",
+    "amazon/chronos-bolt-mini",
+    "amazon/chronos-bolt-small",
+    "amazon/chronos-bolt-base",
+    "amazon/chronos-t5-tiny",
+    "amazon/chronos-t5-mini",
+    "amazon/chronos-t5-small",
+    "amazon/chronos-t5-base",
+    "amazon/chronos-t5-large",
+    "ibm-research/flowstate",
+    "ibm-granite/granite-timeseries-flowstate-r1",
+    "Salesforce/moirai-1.1-R-small",
+    "Salesforce/moirai-1.1-R-base",
+    "Salesforce/moirai-moe-1.0-R-base",
+    "Salesforce/moirai-2.0-R-small",
+    "Salesforce/moirai-1.0-R-large",
+    "ibm-research/patchtst-fm-r1",
+    "ibm-granite/granite-timeseries-patchtst-fm-r1",
+    "thuml/sundial-base-128m",
+    "TabPFN-TS-3",
+    "NX-AI/TiRex",
+    "NX-AI/TiRex-1.1-gifteval",
+    "NX-AI/TiRex-2",
+    "NX-AI/TiRex-2-gifteval-zs",
+    "NX-AI/TiRex-2-gifteval-pretrain",
+    "NX-AI/TiRex-2-fevbench",
+    "google/timesfm-1.0-200m",
+    "google/timesfm-2.0-500m-jax",
+    "google/timesfm-2.0-500m-pytorch",
+    "google/timesfm-2.5-200m-pytorch",
+    "google/timesfm-2.5-200m-flax",
+    "Datadog/Toto-Open-Base-1.0",
+    "Datadog/Toto-2.0-4m",
+    "Datadog/Toto-2.0-22m",
+    "Datadog/Toto-2.0-313m",
+    "Datadog/Toto-2.0-1B",
+    "Datadog/Toto-2.0-2.5B",
+    "Datadog/Toto-2.0-2.5B-FT"
+  ]
+}
