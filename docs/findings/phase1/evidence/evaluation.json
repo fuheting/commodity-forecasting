@@ -1,0 +1,337 @@
+{
+  "artifact_paths": [
+    "docs/findings/phase1/evaluation.md",
+    "docs/findings/phase1/evidence/evaluation.json"
+  ],
+  "checks": {
+    "grouping_complete": true,
+    "input_grid_valid": true,
+    "input_schema_valid": true,
+    "markdown_canonical": true,
+    "metrics_complete": true,
+    "p1_06_consumer_gate_valid": true,
+    "policy_preserved": true,
+    "publication_valid": true,
+    "roadmap_update_eligible": true,
+    "source_binding_valid": true
+  },
+  "classification": "pass",
+  "errors": [],
+  "evaluation_contract": {
+    "group_order": [
+      "aggregate",
+      "horizon_1",
+      "horizon_2",
+      "horizon_3"
+    ],
+    "horizon_steps": [
+      1,
+      2,
+      3
+    ],
+    "interval_coverage_rule": "lower <= actual <= upper",
+    "interval_level": 80,
+    "interval_metrics": [
+      "empirical_coverage",
+      "mean_width"
+    ],
+    "origin_count": 3,
+    "point_metrics": [
+      "mae",
+      "rmse"
+    ],
+    "quantile_coverage_rule": "actual <= quantile_forecast",
+    "quantile_metrics": [
+      "mean_pinball_loss",
+      "empirical_coverage"
+    ],
+    "quantiles": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "source_row_count": 9
+  },
+  "non_pass_diagnostics": [],
+  "publication_protocol": {
+    "commit_marker_valid": true,
+    "evaluation_markdown_sha256": "7c5beac954d84aa39586cc7321b104d2e3925743af1da42639c5e26af6fd1fa1",
+    "marker_path": "docs/findings/phase1/evidence/evaluation.json",
+    "marker_state": "pass_final",
+    "prior_marker_sha256": "335966425dcfde2af239e02918f124d44308bb731307ea835f6f7b7f059368bc",
+    "write_order": [
+      "evaluation.md",
+      "evaluation.json"
+    ]
+  },
+  "results": {
+    "aggregate": {
+      "group_type": "aggregate",
+      "group_value": null,
+      "interval": {
+        "empirical_coverage": 1.0,
+        "level": 80,
+        "mean_width": 1.8552626503838434
+      },
+      "point": {
+        "mae": 0.4907790289984809,
+        "rmse": 0.5155765704172461
+      },
+      "quantiles": [
+        {
+          "empirical_coverage": 0.0,
+          "mean_pinball_loss": 0.09041391012403702,
+          "quantile": 0.1
+        },
+        {
+          "empirical_coverage": 0.1111111111111111,
+          "mean_pinball_loss": 0.11581682756212024,
+          "quantile": 0.2
+        },
+        {
+          "empirical_coverage": 0.5555555555555556,
+          "mean_pinball_loss": 0.17421651289198134,
+          "quantile": 0.3
+        },
+        {
+          "empirical_coverage": 0.5555555555555556,
+          "mean_pinball_loss": 0.2301799079047309,
+          "quantile": 0.4
+        },
+        {
+          "empirical_coverage": 0.5555555555555556,
+          "mean_pinball_loss": 0.24538951449924046,
+          "quantile": 0.5
+        },
+        {
+          "empirical_coverage": 0.6666666666666666,
+          "mean_pinball_loss": 0.22913362248738606,
+          "quantile": 0.6
+        },
+        {
+          "empirical_coverage": 0.6666666666666666,
+          "mean_pinball_loss": 0.19543644184536405,
+          "quantile": 0.7
+        },
+        {
+          "empirical_coverage": 0.8888888888888888,
+          "mean_pinball_loss": 0.14116811837090382,
+          "quantile": 0.8
+        },
+        {
+          "empirical_coverage": 1.0,
+          "mean_pinball_loss": 0.0951123549143473,
+          "quantile": 0.9
+        }
+      ],
+      "row_count": 9
+    },
+    "per_horizon": [
+      {
+        "group_type": "horizon",
+        "group_value": 1,
+        "interval": {
+          "empirical_coverage": 1.0,
+          "level": 80,
+          "mean_width": 1.2332220077514648
+        },
+        "point": {
+          "mae": 0.41748908996582035,
+          "rmse": 0.4258944957878281
+        },
+        "quantiles": [
+          {
+            "empirical_coverage": 0.0,
+            "mean_pinball_loss": 0.06215593401590983,
+            "quantile": 0.1
+          },
+          {
+            "empirical_coverage": 0.3333333333333333,
+            "mean_pinball_loss": 0.10101331837972001,
+            "quantile": 0.2
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.1339269911448161,
+            "quantile": 0.3
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.18767886098225914,
+            "quantile": 0.4
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.20874454498291017,
+            "quantile": 0.5
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.2022005310058594,
+            "quantile": 0.6
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.17317593383789065,
+            "quantile": 0.7
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.12016992441813151,
+            "quantile": 0.8
+          },
+          {
+            "empirical_coverage": 1.0,
+            "mean_pinball_loss": 0.06116626675923664,
+            "quantile": 0.9
+          }
+        ],
+        "row_count": 3
+      },
+      {
+        "group_type": "horizon",
+        "group_value": 2,
+        "interval": {
+          "empirical_coverage": 1.0,
+          "level": 80,
+          "mean_width": 1.8837901751200359
+        },
+        "point": {
+          "mae": 0.5496101570129394,
+          "rmse": 0.5514940084153178
+        },
+        "quantiles": [
+          {
+            "empirical_coverage": 0.0,
+            "mean_pinball_loss": 0.07917278734842936,
+            "quantile": 0.1
+          },
+          {
+            "empirical_coverage": 0.0,
+            "mean_pinball_loss": 0.08215583419799806,
+            "quantile": 0.2
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.17585209910074862,
+            "quantile": 0.3
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.24686939748128248,
+            "quantile": 0.4
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.2748050785064697,
+            "quantile": 0.5
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.26174636967976883,
+            "quantile": 0.6
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.20777984873453773,
+            "quantile": 0.7
+          },
+          {
+            "empirical_coverage": 1.0,
+            "mean_pinball_loss": 0.1594155921936035,
+            "quantile": 0.8
+          },
+          {
+            "empirical_coverage": 1.0,
+            "mean_pinball_loss": 0.10920623016357418,
+            "quantile": 0.9
+          }
+        ],
+        "row_count": 3
+      },
+      {
+        "group_type": "horizon",
+        "group_value": 3,
+        "interval": {
+          "empirical_coverage": 1.0,
+          "level": 80,
+          "mean_width": 2.4487757682800293
+        },
+        "point": {
+          "mae": 0.505237840016683,
+          "rmse": 0.5585032112971828
+        },
+        "quantiles": [
+          {
+            "empirical_coverage": 0.0,
+            "mean_pinball_loss": 0.12991300900777183,
+            "quantile": 0.1
+          },
+          {
+            "empirical_coverage": 0.0,
+            "mean_pinball_loss": 0.16428133010864263,
+            "quantile": 0.2
+          },
+          {
+            "empirical_coverage": 0.3333333333333333,
+            "mean_pinball_loss": 0.21287044843037925,
+            "quantile": 0.3
+          },
+          {
+            "empirical_coverage": 0.3333333333333333,
+            "mean_pinball_loss": 0.2559914652506511,
+            "quantile": 0.4
+          },
+          {
+            "empirical_coverage": 0.3333333333333333,
+            "mean_pinball_loss": 0.2526189200083415,
+            "quantile": 0.5
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.22345396677652996,
+            "quantile": 0.6
+          },
+          {
+            "empirical_coverage": 0.6666666666666666,
+            "mean_pinball_loss": 0.2053535429636638,
+            "quantile": 0.7
+          },
+          {
+            "empirical_coverage": 1.0,
+            "mean_pinball_loss": 0.1439188385009765,
+            "quantile": 0.8
+          },
+          {
+            "empirical_coverage": 1.0,
+            "mean_pinball_loss": 0.11496456782023108,
+            "quantile": 0.9
+          }
+        ],
+        "row_count": 3
+      }
+    ]
+  },
+  "run_id": "P1-07-20260816T154620Z",
+  "schema_version": 1,
+  "source_binding": {
+    "p1_06_evidence_path": "docs/findings/phase1/evidence/rolling_origin.json",
+    "p1_06_evidence_sha256": "59b6b161710e1eaac833baa84668fb9d84f9c3f5489ec55f71b9dcd908a75d76",
+    "p1_06_forecast_csv_path": "data/model_ready/world_bank_pink_sheet_monthly_arabica/rolling_origin/forecasts.csv",
+    "p1_06_forecast_csv_sha256": "ad5d613e86dd5f138f83568694243ce32417cc784317e7ab7e72a8327c8ceaf4",
+    "p1_06_marker_state": "pass_final",
+    "p1_06_publication_label": "revised_workbook_pseudo_real_time",
+    "p1_06_publication_proxy": "strict_prior_month",
+    "p1_06_reference_model_id": "autogluon/chronos-2-small",
+    "p1_06_run_id": "P1-06-20260816142818Z",
+    "p1_06_vintage_limitation": "Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions."
+  },
+  "task_id": "P1-07",
+  "timestamp_utc": "2026-08-16T15:46:20.257571Z"
+}
