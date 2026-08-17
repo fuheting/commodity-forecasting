@@ -1,0 +1,67 @@
+{
+  "artifact_paths": [
+    "docs/findings/phase1/natural_language.md",
+    "docs/findings/phase1/evidence/natural_language.json"
+  ],
+  "checks": {
+    "analysis_nonempty": false,
+    "dependency_gate_pass": true,
+    "env_key_loaded": true,
+    "input_window_valid": true,
+    "model_resolved": false,
+    "no_future_leakage": true,
+    "provider_model_consistent": false,
+    "provider_resolved": false,
+    "query_anchors_present": false,
+    "query_response_nonempty": false,
+    "required_tool_calls_exact": false,
+    "roadmap_eligible": false,
+    "secret_free": true
+  },
+  "classification": "blocked",
+  "diagnostics": [
+    {
+      "classification": "blocked",
+      "error_kind": "runtime_dependency_unavailable",
+      "exception_class": "OSError",
+      "sanitized_reason": "required runtime dependency is unavailable.",
+      "stage": "forecaster_construction"
+    }
+  ],
+  "forecast_analysis": null,
+  "input_contract": {
+    "context_end": "2026-04-01",
+    "context_row_count": 60,
+    "context_start": "2021-05-01",
+    "cutoff": "2026-04-01",
+    "forecast_end": "2026-07-01",
+    "forecast_start": "2026-05-01",
+    "freq": "MS",
+    "h": 3,
+    "reference_model_id": "autogluon/chronos-2-small",
+    "seasonality": 12
+  },
+  "observed_model": null,
+  "observed_provider": null,
+  "query": "For Coffee, Arabica, using the 60-month monthly history through April 2026 and the May-July 2026 forecast horizon, explain the next 3-month outlook, note the main historical pattern the model sees, and summarize the uncertainty in plain language.",
+  "requested_llm": "deepseek:deepseek-v4-flash",
+  "run_id": "P1-08-20260817T094200Z",
+  "schema_version": 1,
+  "source_binding": {
+    "p1_06_classification": "pass",
+    "p1_06_evidence_path": "docs/findings/phase1/evidence/rolling_origin.json",
+    "p1_06_marker_state": "pass_final",
+    "p1_06_reference_model_id": "autogluon/chronos-2-small",
+    "p1_06_run_id": "P1-06-20260816142818Z",
+    "p1_07_classification": "pass",
+    "p1_07_evidence_path": "docs/findings/phase1/evidence/evaluation.json",
+    "p1_07_run_id": "P1-07-20260816T154620Z",
+    "p1_07_source_p1_06_run_id": "P1-06-20260816142818Z",
+    "target_path": "data/model_ready/world_bank_pink_sheet_monthly_arabica/target.csv"
+  },
+  "structured_output_tool": null,
+  "task_id": "P1-08",
+  "timestamp_utc": "2026-08-17T09:42:00Z",
+  "tool_calls": [],
+  "user_query_response": null
+}
