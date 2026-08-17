@@ -597,6 +597,29 @@ def test_unclassified_model_api_request_failure_is_neutral_and_blocked() -> None
 
 
 @pytest.mark.parametrize(
+    ("status_code", "error_kind"),
+    [
+        (401, "authentication_rejected"),
+        (403, "authentication_rejected"),
+        (429, "rate_limited"),
+        (500, "provider_request_failed"),
+        (None, "provider_request_failed"),
+    ],
+)
+def test_model_http_error_is_classified_by_status(
+    status_code: int | None, error_kind: str
+) -> None:
+    class ModelHTTPError(Exception):
+        def __init__(self, status: int | None) -> None:
+            super().__init__("provider response")
+            self.status_code = status
+
+    item = subject._external_diagnostic(ModelHTTPError(status_code), stage="request")
+    assert item["exception_class"] == "ModelHTTPError"
+    assert item["error_kind"] == error_kind
+
+
+@pytest.mark.parametrize(
     ("exception", "stage"),
     [
         (RuntimeError("raw secret"), "request"),

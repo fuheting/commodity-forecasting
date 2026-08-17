@@ -86,7 +86,7 @@ EXCEPTION_CLASSES = {
     "InputContractError", "UserError", "AuthenticationError",
     "PermissionDeniedError", "RateLimitError", "APIConnectionError",
     "APITimeoutError", "ProxyError", "ConnectError", "TimeoutException",
-    "ImportError", "ModuleNotFoundError", "ModelAPIError",
+    "ImportError", "ModuleNotFoundError", "ModelAPIError", "ModelHTTPError",
     "UnexpectedModelBehavior", "OutputContractError", "PublicationError",
     "OSError", "ExternalRuntimeError", "LocalContractError",
 }
@@ -841,6 +841,13 @@ def _external_diagnostic(exc: Exception, *, stage: str) -> dict[str, str]:
         if stage == "request":
             return diagnostic(stage, name, "provider_request_failed")
         return diagnostic(stage, name, "provider_unavailable")
+    if name == "ModelHTTPError":
+        status_code = getattr(exc, "status_code", None)
+        if status_code in {401, 403}:
+            return diagnostic(stage, name, "authentication_rejected")
+        if status_code == 429:
+            return diagnostic(stage, name, "rate_limited")
+        return diagnostic(stage, name, "provider_request_failed")
     if name in {"ImportError", "ModuleNotFoundError"} and ("proxy" in detail or "socks" in detail):
         return diagnostic(stage, name, "proxy_unavailable")
     if name in {"ImportError", "ModuleNotFoundError"}:
