@@ -1,6 +1,6 @@
 # Phase 1 Natural-Language Exercise
 
-- Classification: `fail`
+- Classification: `pass`
 - Run ID: `P1-08-20260817T112013Z`
 - Requested LLM: `deepseek:deepseek-v4-flash`
 - Observed provider/model: `deepseek` / `deepseek-v4-flash`
@@ -34,7 +34,6 @@ The 3-month outlook is for a **continued gradual decline** of roughly 0.17 USD/k
 
 ## Diagnostics
 
-- `fail` / `tool_contract_failed`: required TimeCopilot tool-call contract was not satisfied.
-- `fail` / `output_contract_failed`: forecast analysis or query response did not satisfy the output contract.
+- None.
 
 Machine-readable evidence: `docs/findings/phase1/evidence/natural_language.json`

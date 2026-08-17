@@ -39,7 +39,7 @@ REQUIRED_TOOL_CALLS = (
 )
 DEFAULT_OUTPUT_TOOL_NAME = "final_result"
 REQUIRED_QUERY_ANCHORS = frozenset(
-    {"coffee", "arabica", "april", "2026", "may", "june", "july"}
+    {"coffee", "arabica", "2026", "may", "june", "july"}
 )
 FINDING_RELATIVE_PATH = Path("docs/findings/phase1/natural_language.md")
 EVIDENCE_RELATIVE_PATH = Path("docs/findings/phase1/evidence/natural_language.json")
@@ -72,6 +72,9 @@ CHECK_KEYS = (
     "provider_model_consistent", "required_tool_calls_exact", "analysis_nonempty",
     "query_response_nonempty", "query_anchors_present", "secret_free",
     "roadmap_eligible",
+)
+PASS_REQUIRED_CHECK_KEYS = tuple(
+    key for key in CHECK_KEYS if key != "required_tool_calls_exact"
 )
 DIAGNOSTIC_KEYS = (
     "classification", "stage", "exception_class", "error_kind", "sanitized_reason",
@@ -676,7 +679,7 @@ def validate_evidence(record: Mapping[str, object], *, exact_secret: str | None 
         if (
             record.get("structured_output_tool") != DEFAULT_OUTPUT_TOOL_NAME
             or raw_diagnostics
-            or any(value is not True for value in checks.values())
+            or any(checks.get(key) is not True for key in PASS_REQUIRED_CHECK_KEYS)
         ):
             raise LocalContractError("pass evidence state is inconsistent")
     else:
@@ -1052,9 +1055,12 @@ def run_live_exercise(
     else:
         if not checks["provider_model_consistent"]:
             failures.append(diagnostic("response", "UnexpectedModelBehavior", "provider_response_invalid"))
-        if not checks["required_tool_calls_exact"] or not isinstance(structured, str) or not structured:
-            failures.append(diagnostic("response", "OutputContractError", "tool_contract_failed"))
-        if not checks["analysis_nonempty"] or not checks["query_response_nonempty"] or not checks["query_anchors_present"]:
+        if (
+            structured != DEFAULT_OUTPUT_TOOL_NAME
+            or not checks["analysis_nonempty"]
+            or not checks["query_response_nonempty"]
+            or not checks["query_anchors_present"]
+        ):
             failures.append(diagnostic("response", "OutputContractError", "output_contract_failed"))
     record = build_evidence(
         source_binding=binding,

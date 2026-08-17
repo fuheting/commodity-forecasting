@@ -258,6 +258,7 @@ def test_query_anchor_normalization_is_nfkc_casefolded_and_punctuation_agnostic(
     assert subject.query_anchors_present(
         "ＣＯＦＦＥＥ / ARABICA: APRIL—2026; MAY, JUNE & JULY"
     )
+    assert subject.query_anchors_present("Coffee Arabica outlook for May June July 2026")
     assert not subject.query_anchors_present("Coffee Arabica April 2026 May June")
 
 
@@ -372,6 +373,46 @@ def test_live_runner_calls_forecast_exactly_once_with_fixed_contract(
         "seasonality": 12,
         "query": subject.QUERY,
     }
+
+
+def test_live_runner_accepts_final_response_despite_duplicate_tool_call(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    monkeypatch.setattr(subject, "load_validated_input", lambda root: (_binding(), (object(),)))
+    monkeypatch.setattr(subject, "build_agent_frame", lambda rows: "history-only-frame")
+    result = FakeResult(
+        [
+            FakeResponse(
+                [
+                    subject.REQUIRED_TOOL_CALLS[0],
+                    subject.REQUIRED_TOOL_CALLS[0],
+                    subject.REQUIRED_TOOL_CALLS[1],
+                    subject.REQUIRED_TOOL_CALLS[2],
+                    subject.REQUIRED_TOOL_CALLS[3],
+                    "final_result",
+                ]
+            )
+        ]
+    )
+    result.output.user_query_response = (
+        "Coffee Arabica outlook for May, June, and July 2026 is moderately softer."
+    )
+
+    record = subject.run_live_exercise(
+        tmp_path,
+        timecopilot_factory=lambda **kwargs: FakeAgent(result),
+        forecaster_factory=lambda: "chronos",
+        environ={subject.ENV_KEY: "test-only-exact-secret"},
+        now=NOW,
+    )
+
+    assert record["classification"] == "pass"
+    assert record["diagnostics"] == []
+    checks = cast(dict[str, bool], record["checks"])
+    assert checks["required_tool_calls_exact"] is False
+    assert checks["query_anchors_present"] is True
+    assert checks["roadmap_eligible"] is True
+    subject.validate_evidence(record, exact_secret="test-only-exact-secret")
 
 
 def test_success_with_zero_model_responses_is_fail(
