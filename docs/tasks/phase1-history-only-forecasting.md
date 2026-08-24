@@ -13,6 +13,8 @@ Authoritative inputs:
 
 Generated `.omx` planning artifacts are historical workflow records, not authoritative inputs for this versioned execution contract.
 
+> Architecture note (2026-08-24): the `phase1` source and test paths below record the original execution plan. The implemented code has since moved to responsibility-based modules under `src/commodity_forecasting/{data,forecasting,evaluation,analysis,integrations}`, repository workflows under `tools/workflows`, and capability-based test tiers under `tests/{unit,integration,acceptance}`. See `docs/architecture.md` for the current mapping. Historical evidence commands and artifact paths are intentionally not rewritten.
+
 ## Fixed Contract
 
 - Target: World Bank Pink Sheet `Coffee, Arabica`, monthly, `$/kg`.

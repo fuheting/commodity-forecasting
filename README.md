@@ -1,33 +1,82 @@
 # Commodity Price Forecasting with TimeCopilot
 
-A lean proof-of-concept project for probabilistic commodity price forecasting using TimeCopilot.
+A lean proof of concept for monthly probabilistic forecasting of the World Bank Pink Sheet `Coffee, Arabica` price series.
 
-The active use case is the World Bank Pink Sheet **Coffee, Arabica** series:
+The fixed experiment uses a 60-month history, a 3-month horizon, and three one-month-step rolling origins. It reports point and probabilistic metrics without a performance threshold. The validation is revised-workbook pseudo-real-time, not historical-vintage real-time.
 
-- target: monthly price level in `$/kg`
-- forecast horizon: 3 months
-- historical context: 60 months
+## Status
 
-## PoC Structure
+Phase 0 discovery and Phase 1 execution tasks P1-01 through P1-08 are complete. The P1-09 evidence rollup is still pending, so Phase 1 is not marked complete.
 
-**Phase 1:** history-only forecasting and historical validation.
+See `docs/roadmap.md` for evidence-linked status and `docs/architecture.md` for the code layout.
 
-**Phase 2:** structured covariate forecasting where the TimeCopilot integration actually supports covariates; unsupported models may remain history-only.
+## Structure
 
-The PoC also includes TimeCopilot natural-language forecast queries, analysis, and explanation.
+```text
+src/commodity_forecasting/   reusable installed code
+  data/                      target contracts, workbook extraction, CSV codec
+  forecasting/               leakage-safe rolling-origin orchestration
+  evaluation/                deterministic point and probabilistic metrics
+  analysis/                  provider-neutral analysis/result helpers
+  integrations/              optional external-library adapters
 
-Multimodal inputs, model fine-tuning, trading strategies, and production deployment are out of scope.
+tools/
+  capability_probes/         completed historical capability checks
+  workflows/                 repository evidence, runtime, and publication workflows
 
-The weekly synthetic fixtures under `tests/fixtures/phase0/` are retained only to reproduce completed Phase 0 adapter-capability smoke tests. They do not define the active monthly forecast contract.
+tests/
+  unit/                      focused deterministic behavior
+  integration/               component and artifact interactions
+  acceptance/                repository evidence and workflow contracts
+  fixtures/                  historical probe inputs
+  support/                   test-only builders
+```
 
-## Current Status
+Production code does not import repository tools, tests, findings, roadmap state, or historical phase packages.
 
-**Phase 0 — Complete; Phase 1 ready**
+## Setup
 
-Phase 0 established:
+Python 3.10 or newer is required.
 
-- actual TimeCopilot covariate support;
-- the preserved World Bank workbook as the static PoC source;
-- the initial data catalog.
+```bash
+python -m venv .venv
+.venv/bin/python -m pip install -e '.[dev]'
+```
 
-See `docs/roadmap.md` for implementation progress.
+Install the optional TimeCopilot runtime only for explicit live checks:
+
+```bash
+.venv/bin/python -m pip install -e '.[dev,live]'
+```
+
+## Verification
+
+The default suite is credential-free and excludes tests marked `live`:
+
+```bash
+.venv/bin/pytest -q
+.venv/bin/mypy src tools tests
+```
+
+Run optional live checks explicitly after installing the `live` extra and satisfying their GPU, network, cache, or credential prerequisites:
+
+```bash
+.venv/bin/pytest -q -m live
+```
+
+The P1-08 live exercise reads `DEEPSEEK_API_KEY` from `.env`; the value is never written to evidence.
+
+## Repository workflows
+
+Repository-specific evidence and roadmap operations are intentionally not installed as application APIs. Run them from the checkout with an explicit root. Examples:
+
+```bash
+.venv/bin/python -m tools.workflows.target_publication publish --repo-root "$PWD"
+.venv/bin/python -m tools.workflows.backtest_publication --repo-root "$PWD" --validate-publication
+.venv/bin/python -m tools.workflows.evaluation_publication --repo-root "$PWD" --validate-publication
+.venv/bin/python -m tools.workflows.natural_language_exercise --repo-root "$PWD" --validate-publication
+```
+
+Use each module's `--help` for its publish, validate, live, and roadmap actions. Historical evidence and accepted data remain under `docs/findings/` and `data/`; refactoring does not regenerate them.
+
+Multimodal input, fine-tuning, trading logic, production infrastructure, new datasource acquisition, and speculative covariate adapters remain out of scope.
