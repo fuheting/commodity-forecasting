@@ -1,0 +1,612 @@
+{
+  "schema_version": 1,
+  "catalog_captured_at_utc": "2026-08-14T14:24:44Z",
+  "frozen_inventory": [
+    {
+      "family": "Chronos / Chronos-2",
+      "identifiers": [
+        "amazon/chronos-bolt-tiny",
+        "amazon/chronos-bolt-mini",
+        "amazon/chronos-bolt-small",
+        "amazon/chronos-bolt-base",
+        "amazon/chronos-t5-tiny",
+        "amazon/chronos-t5-mini",
+        "amazon/chronos-t5-small",
+        "amazon/chronos-t5-base",
+        "amazon/chronos-t5-large",
+        "amazon/chronos-2",
+        "autogluon/chronos-2-synth",
+        "autogluon/chronos-2-small"
+      ]
+    },
+    {
+      "family": "FlowState",
+      "identifiers": [
+        "ibm-research/flowstate",
+        "ibm-granite/granite-timeseries-flowstate-r1"
+      ]
+    },
+    {
+      "family": "Moirai",
+      "identifiers": [
+        "Salesforce/moirai-1.1-R-small",
+        "Salesforce/moirai-1.1-R-base",
+        "Salesforce/moirai-moe-1.0-R-base",
+        "Salesforce/moirai-2.0-R-small",
+        "Salesforce/moirai-1.0-R-large"
+      ]
+    },
+    {
+      "family": "PatchTST-FM",
+      "identifiers": [
+        "ibm-research/patchtst-fm-r1",
+        "ibm-granite/granite-timeseries-patchtst-fm-r1"
+      ]
+    },
+    {
+      "family": "Sundial",
+      "identifiers": [
+        "thuml/sundial-base-128m"
+      ]
+    },
+    {
+      "family": "TabPFN",
+      "identifiers": [
+        "TabPFN-TS-3"
+      ]
+    },
+    {
+      "family": "TiRex",
+      "identifiers": [
+        "NX-AI/TiRex",
+        "NX-AI/TiRex-1.1-gifteval"
+      ]
+    },
+    {
+      "family": "TiRex-2",
+      "identifiers": [
+        "NX-AI/TiRex-2",
+        "NX-AI/TiRex-2-gifteval-zs",
+        "NX-AI/TiRex-2-gifteval-pretrain",
+        "NX-AI/TiRex-2-fevbench"
+      ]
+    },
+    {
+      "family": "TimesFM",
+      "identifiers": [
+        "google/timesfm-1.0-200m",
+        "google/timesfm-1.0-200m-pytorch",
+        "google/timesfm-2.0-500m-jax",
+        "google/timesfm-2.0-500m-pytorch",
+        "google/timesfm-2.5-200m-pytorch",
+        "google/timesfm-2.5-200m-flax",
+        "google/timesfm-2.5-200m-transformers"
+      ]
+    },
+    {
+      "family": "Toto / Toto-2",
+      "identifiers": [
+        "Datadog/Toto-Open-Base-1.0",
+        "Datadog/Toto-2.0-4m",
+        "Datadog/Toto-2.0-22m",
+        "Datadog/Toto-2.0-313m",
+        "Datadog/Toto-2.0-1B",
+        "Datadog/Toto-2.0-2.5B",
+        "Datadog/Toto-2.0-2.5B-FT",
+        "Datadog/Toto-2.0-Family-and-Friends"
+      ]
+    }
+  ],
+  "official_catalog": [
+    {
+      "family": "Chronos / Chronos-2",
+      "identifiers": [
+        "amazon/chronos-bolt-tiny",
+        "amazon/chronos-bolt-mini",
+        "amazon/chronos-bolt-small",
+        "amazon/chronos-bolt-base",
+        "amazon/chronos-t5-tiny",
+        "amazon/chronos-t5-mini",
+        "amazon/chronos-t5-small",
+        "amazon/chronos-t5-base",
+        "amazon/chronos-t5-large",
+        "amazon/chronos-2",
+        "autogluon/chronos-2-synth",
+        "autogluon/chronos-2-small"
+      ],
+      "official_sources": [
+        {
+          "identifier": "amazon/chronos-bolt-tiny",
+          "source_ref": "src:official:amazon_chronos_bolt_tiny",
+          "url": "https://huggingface.co/amazon/chronos-bolt-tiny",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-bolt-mini",
+          "source_ref": "src:official:amazon_chronos_bolt_mini",
+          "url": "https://huggingface.co/amazon/chronos-bolt-mini",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-bolt-small",
+          "source_ref": "src:official:amazon_chronos_bolt_small",
+          "url": "https://huggingface.co/amazon/chronos-bolt-small",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-bolt-base",
+          "source_ref": "src:official:amazon_chronos_bolt_base",
+          "url": "https://huggingface.co/amazon/chronos-bolt-base",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-t5-tiny",
+          "source_ref": "src:official:amazon_chronos_t5_tiny",
+          "url": "https://huggingface.co/amazon/chronos-t5-tiny",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-t5-mini",
+          "source_ref": "src:official:amazon_chronos_t5_mini",
+          "url": "https://huggingface.co/amazon/chronos-t5-mini",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-t5-small",
+          "source_ref": "src:official:amazon_chronos_t5_small",
+          "url": "https://huggingface.co/amazon/chronos-t5-small",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-t5-base",
+          "source_ref": "src:official:amazon_chronos_t5_base",
+          "url": "https://huggingface.co/amazon/chronos-t5-base",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-t5-large",
+          "source_ref": "src:official:amazon_chronos_t5_large",
+          "url": "https://huggingface.co/amazon/chronos-t5-large",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "amazon/chronos-2",
+          "source_ref": "src:official:amazon_chronos_2",
+          "url": "https://huggingface.co/amazon/chronos-2",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-10-20",
+          "stable_locator": "2025-10-20; artifact identity and model metadata"
+        },
+        {
+          "identifier": "autogluon/chronos-2-synth",
+          "source_ref": "src:official:autogluon_chronos_2_synth",
+          "url": "https://huggingface.co/autogluon/chronos-2-synth",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-10-20",
+          "stable_locator": "2025-10-20; artifact identity and model metadata"
+        },
+        {
+          "identifier": "autogluon/chronos-2-small",
+          "source_ref": "src:official:autogluon_chronos_2_small",
+          "url": "https://huggingface.co/autogluon/chronos-2-small",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-10-20",
+          "stable_locator": "2025-10-20; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "FlowState",
+      "identifiers": [
+        "ibm-research/flowstate",
+        "ibm-granite/granite-timeseries-flowstate-r1"
+      ],
+      "official_sources": [
+        {
+          "identifier": "ibm-research/flowstate",
+          "source_ref": "src:official:ibm_research_flowstate",
+          "url": "https://huggingface.co/ibm-research/flowstate",
+          "source_version_status": "known",
+          "source_version_or_date": "r1.1 / 2025-08-07",
+          "stable_locator": "r1.1 / 2025-08-07; artifact identity and model metadata"
+        },
+        {
+          "identifier": "ibm-granite/granite-timeseries-flowstate-r1",
+          "source_ref": "src:official:ibm_granite_granite_timeseries_flowstate_r1",
+          "url": "https://huggingface.co/ibm-granite/granite-timeseries-flowstate-r1",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-08-07",
+          "stable_locator": "2025-08-07; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "Moirai",
+      "identifiers": [
+        "Salesforce/moirai-1.1-R-small",
+        "Salesforce/moirai-1.1-R-base",
+        "Salesforce/moirai-moe-1.0-R-base",
+        "Salesforce/moirai-2.0-R-small",
+        "Salesforce/moirai-1.0-R-large"
+      ],
+      "official_sources": [
+        {
+          "identifier": "Salesforce/moirai-1.1-R-small",
+          "source_ref": "src:official:salesforce_moirai_1_1_r_small",
+          "url": "https://huggingface.co/Salesforce/moirai-1.1-R-small",
+          "source_version_status": "known",
+          "source_version_or_date": "Uni2TS 1.1.0 / adf7206 / 2024-06-14",
+          "stable_locator": "Uni2TS 1.1.0 / adf7206 / 2024-06-14; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Salesforce/moirai-1.1-R-base",
+          "source_ref": "src:official:salesforce_moirai_1_1_r_base",
+          "url": "https://huggingface.co/Salesforce/moirai-1.1-R-base",
+          "source_version_status": "known",
+          "source_version_or_date": "Uni2TS 1.1.0 / adf7206 / 2024-06-14",
+          "stable_locator": "Uni2TS 1.1.0 / adf7206 / 2024-06-14; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Salesforce/moirai-moe-1.0-R-base",
+          "source_ref": "src:official:salesforce_moirai_moe_1_0_r_base",
+          "url": "https://huggingface.co/Salesforce/moirai-moe-1.0-R-base",
+          "source_version_status": "known",
+          "source_version_or_date": "Uni2TS 1.2.0 / fdcb656 / 2024-11-28",
+          "stable_locator": "Uni2TS 1.2.0 / fdcb656 / 2024-11-28; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Salesforce/moirai-2.0-R-small",
+          "source_ref": "src:official:salesforce_moirai_2_0_r_small",
+          "url": "https://huggingface.co/Salesforce/moirai-2.0-R-small",
+          "source_version_status": "known",
+          "source_version_or_date": "Uni2TS 2.0.0 / 8062ef5 / 2025-11-04",
+          "stable_locator": "Uni2TS 2.0.0 / 8062ef5 / 2025-11-04; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Salesforce/moirai-1.0-R-large",
+          "source_ref": "src:official:salesforce_moirai_1_0_r_large",
+          "url": "https://huggingface.co/Salesforce/moirai-1.0-R-large",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "PatchTST-FM",
+      "identifiers": [
+        "ibm-research/patchtst-fm-r1",
+        "ibm-granite/granite-timeseries-patchtst-fm-r1"
+      ],
+      "official_sources": [
+        {
+          "identifier": "ibm-research/patchtst-fm-r1",
+          "source_ref": "src:official:ibm_research_patchtst_fm_r1",
+          "url": "https://huggingface.co/ibm-research/patchtst-fm-r1",
+          "source_version_status": "known",
+          "source_version_or_date": "2026-02-06",
+          "stable_locator": "2026-02-06; artifact identity and model metadata"
+        },
+        {
+          "identifier": "ibm-granite/granite-timeseries-patchtst-fm-r1",
+          "source_ref": "src:official:ibm_granite_granite_timeseries_patchtst_fm_r1",
+          "url": "https://huggingface.co/ibm-granite/granite-timeseries-patchtst-fm-r1",
+          "source_version_status": "known",
+          "source_version_or_date": "2026-03-18",
+          "stable_locator": "2026-03-18; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "Sundial",
+      "identifiers": [
+        "thuml/sundial-base-128m"
+      ],
+      "official_sources": [
+        {
+          "identifier": "thuml/sundial-base-128m",
+          "source_ref": "src:official:thuml_sundial_base_128m",
+          "url": "https://huggingface.co/thuml/sundial-base-128m",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-02-02",
+          "stable_locator": "2025-02-02; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "TabPFN",
+      "identifiers": [
+        "TabPFN-TS-3"
+      ],
+      "official_sources": [
+        {
+          "identifier": "TabPFN-TS-3",
+          "source_ref": "src:official:tabpfn_ts_3",
+          "url": "https://github.com/PriorLabs/tabpfn-time-series",
+          "source_version_status": "known",
+          "source_version_or_date": "tabpfn-time-series v1.1.0 / 2026-05-12",
+          "stable_locator": "tabpfn-time-series v1.1.0 / 2026-05-12; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "TiRex",
+      "identifiers": [
+        "NX-AI/TiRex",
+        "NX-AI/TiRex-1.1-gifteval"
+      ],
+      "official_sources": [
+        {
+          "identifier": "NX-AI/TiRex",
+          "source_ref": "src:official:nx_ai_tirex",
+          "url": "https://huggingface.co/NX-AI/TiRex",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-05-29",
+          "stable_locator": "2025-05-29; artifact identity and model metadata"
+        },
+        {
+          "identifier": "NX-AI/TiRex-1.1-gifteval",
+          "source_ref": "src:official:nx_ai_tirex_1_1_gifteval",
+          "url": "https://huggingface.co/NX-AI/TiRex-1.1-gifteval",
+          "source_version_status": "known",
+          "source_version_or_date": "2025-05-29",
+          "stable_locator": "2025-05-29; artifact identity and model metadata"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "TiRex-2",
+      "identifiers": [
+        "NX-AI/TiRex-2",
+        "NX-AI/TiRex-2-gifteval-zs",
+        "NX-AI/TiRex-2-gifteval-pretrain",
+        "NX-AI/TiRex-2-fevbench"
+      ],
+      "official_sources": [
+        {
+          "identifier": "NX-AI/TiRex-2",
+          "source_ref": "src:official:nx_ai_tirex_2",
+          "url": "https://huggingface.co/NX-AI/TiRex-2",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "NX-AI/TiRex-2-gifteval-zs",
+          "source_ref": "src:official:nx_ai_tirex_2_gifteval_zs",
+          "url": "https://huggingface.co/NX-AI/TiRex-2-gifteval-zs",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "NX-AI/TiRex-2-gifteval-pretrain",
+          "source_ref": "src:official:nx_ai_tirex_2_gifteval_pretrain",
+          "url": "https://huggingface.co/NX-AI/TiRex-2-gifteval-pretrain",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "NX-AI/TiRex-2-fevbench",
+          "source_ref": "src:official:nx_ai_tirex_2_fevbench",
+          "url": "https://huggingface.co/NX-AI/TiRex-2-fevbench",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "TimesFM",
+      "identifiers": [
+        "google/timesfm-1.0-200m",
+        "google/timesfm-1.0-200m-pytorch",
+        "google/timesfm-2.0-500m-jax",
+        "google/timesfm-2.0-500m-pytorch",
+        "google/timesfm-2.5-200m-pytorch",
+        "google/timesfm-2.5-200m-flax",
+        "google/timesfm-2.5-200m-transformers"
+      ],
+      "official_sources": [
+        {
+          "identifier": "google/timesfm-1.0-200m",
+          "source_ref": "src:official:google_timesfm_1_0_200m",
+          "url": "https://huggingface.co/google/timesfm-1.0-200m",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-1.0-200m-pytorch",
+          "source_ref": "src:official:google_timesfm_1_0_200m_pytorch",
+          "url": "https://huggingface.co/google/timesfm-1.0-200m-pytorch",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-2.0-500m-jax",
+          "source_ref": "src:official:google_timesfm_2_0_500m_jax",
+          "url": "https://huggingface.co/google/timesfm-2.0-500m-jax",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-2.0-500m-pytorch",
+          "source_ref": "src:official:google_timesfm_2_0_500m_pytorch",
+          "url": "https://huggingface.co/google/timesfm-2.0-500m-pytorch",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-2.5-200m-pytorch",
+          "source_ref": "src:official:google_timesfm_2_5_200m_pytorch",
+          "url": "https://huggingface.co/google/timesfm-2.5-200m-pytorch",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-2.5-200m-flax",
+          "source_ref": "src:official:google_timesfm_2_5_200m_flax",
+          "url": "https://huggingface.co/google/timesfm-2.5-200m-flax",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "google/timesfm-2.5-200m-transformers",
+          "source_ref": "src:official:google_timesfm_2_5_200m_transformers",
+          "url": "https://huggingface.co/google/timesfm-2.5-200m-transformers",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "Toto / Toto-2",
+      "identifiers": [
+        "Datadog/Toto-Open-Base-1.0",
+        "Datadog/Toto-2.0-4m",
+        "Datadog/Toto-2.0-22m",
+        "Datadog/Toto-2.0-313m",
+        "Datadog/Toto-2.0-1B",
+        "Datadog/Toto-2.0-2.5B",
+        "Datadog/Toto-2.0-2.5B-FT",
+        "Datadog/Toto-2.0-Family-and-Friends"
+      ],
+      "official_sources": [
+        {
+          "identifier": "Datadog/Toto-Open-Base-1.0",
+          "source_ref": "src:official:datadog_toto_open_base_1_0",
+          "url": "https://huggingface.co/Datadog/Toto-Open-Base-1.0",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-4m",
+          "source_ref": "src:official:datadog_toto_2_0_4m",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-4m",
+          "source_version_status": "known",
+          "source_version_or_date": "Toto 2.0 collection / 2026-05-11",
+          "stable_locator": "Toto 2.0 collection / 2026-05-11; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-22m",
+          "source_ref": "src:official:datadog_toto_2_0_22m",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-22m",
+          "source_version_status": "known",
+          "source_version_or_date": "Toto 2.0 collection / 2026-05-11",
+          "stable_locator": "Toto 2.0 collection / 2026-05-11; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-313m",
+          "source_ref": "src:official:datadog_toto_2_0_313m",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-313m",
+          "source_version_status": "known",
+          "source_version_or_date": "Toto 2.0 collection / 2026-05-11",
+          "stable_locator": "Toto 2.0 collection / 2026-05-11; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-1B",
+          "source_ref": "src:official:datadog_toto_2_0_1b",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-1B",
+          "source_version_status": "known",
+          "source_version_or_date": "Toto 2.0 collection / 2026-05-11",
+          "stable_locator": "Toto 2.0 collection / 2026-05-11; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-2.5B",
+          "source_ref": "src:official:datadog_toto_2_0_2_5b",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-2.5B",
+          "source_version_status": "known",
+          "source_version_or_date": "Toto 2.0 collection / 2026-05-11",
+          "stable_locator": "Toto 2.0 collection / 2026-05-11; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-2.5B-FT",
+          "source_ref": "src:official:datadog_toto_2_0_2_5b_ft",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-2.5B-FT",
+          "source_version_status": "known",
+          "source_version_or_date": "2026-05-19",
+          "stable_locator": "2026-05-19; artifact identity and model metadata"
+        },
+        {
+          "identifier": "Datadog/Toto-2.0-Family-and-Friends",
+          "source_ref": "src:official:datadog_toto_2_0_family_and_friends",
+          "url": "https://huggingface.co/Datadog/Toto-2.0-Family-and-Friends",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "T0",
+      "identifiers": [
+        "theforecastingcompany/t0-alpha"
+      ],
+      "official_sources": [
+        {
+          "identifier": "theforecastingcompany/t0-alpha",
+          "source_ref": "src:official:theforecastingcompany_t0_alpha",
+          "url": "https://huggingface.co/theforecastingcompany/t0-alpha",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    },
+    {
+      "family": "TimeGPT",
+      "identifiers": [
+        "TimeGPT"
+      ],
+      "official_sources": [
+        {
+          "identifier": "TimeGPT",
+          "source_ref": "src:official:timegpt",
+          "url": "https://www.nixtla.io/docs/reference/sdk_reference",
+          "source_version_status": "unknown",
+          "source_version_or_date": "unknown",
+          "stable_locator": "current model card at retrieval; mutable source"
+        }
+      ],
+      "retrieved_at_utc": "2026-08-14T14:24:44Z"
+    }
+  ]
+}

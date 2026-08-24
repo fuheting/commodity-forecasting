@@ -10,15 +10,19 @@ requires-python = ">=3.10"
 dependencies = ["openpyxl>=3.1,<4"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
-smoke = ["pytest>=8", "timecopilot==0.0.30"]
+dev = ["mypy>=1.18", "numpy>=1.26", "pandas>=2", "pytest>=8"]
+live = ["timecopilot==0.0.30"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
+addopts = "-m 'not live'"
+markers = [
+  "live: requires optional model/runtime dependencies, credentials, a GPU, or network access",
+]
 
 [tool.mypy]
 ignore_missing_imports = true
