@@ -27,6 +27,7 @@ Read before implementation:
 - Must keep the PoC lean; do NOT add multimodal ingestion, fine-tuning, trading logic, production infrastructure, or unnecessary frameworks.
 - Must update `docs/roadmap.md` after completing a roadmap task.
 - Must NOT mark a roadmap task complete without evidence that its acceptance condition was met.
+- Must NOT add hash-based artifact identities, SHA256 pipelines, deduplication infrastructure, elaborate checkpointing, or production-scale observability unless a demonstrated requirement exists.
 
 ## Code Style
 
@@ -38,6 +39,14 @@ Read before implementation:
 - Raise explicit errors for unsupported states; do not silently ignore unsupported inputs.
 - Keep reusable logic out of notebooks.
 - Add tests for timestamp handling, target construction, feature availability, and evaluation logic.
+- Keep reusable application logic in `src/`.
+- Keep executable entry points thin; scripts should call `src/`, not implement core logic.
+- Keep tests, acceptance checks, fixtures, and developer diagnostics outside production code.
+- Organize modules by responsibility, not by implementation phase or development history.
+- Split modules when they contain multiple distinct responsibilities; do not split solely to reduce line count.
+- Keep dependencies one-directional. Production code must not depend on tests, examples, or developer tools.
+- Keep domain- or dataset-specific assumptions out of generic modules; pass them through inputs or configuration.
+- Remove obsolete paths after refactoring instead of maintaining parallel old and new implementations.
 
 ## Task Completion
 
