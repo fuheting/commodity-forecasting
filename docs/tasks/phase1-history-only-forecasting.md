@@ -251,8 +251,9 @@ For each variant record: official source URL; source version/date; retrieval tim
 
 **Write paths:**
 
-- `src/commodity_forecasting/phase1/roadmap_exit.py`
-- `tests/smoke/test_phase1_roadmap_exit.py`
+- `tools/workflows/phase1_exit_rollup.py`
+- `tests/unit/workflows/test_phase1_exit_rollup.py`
+- `tests/acceptance/workflows/test_phase1_exit_rollup.py`
 - `docs/findings/phase1/exit_rollup.md`
 - `docs/findings/phase1/evidence/exit_rollup.json`
 - `docs/roadmap.md`

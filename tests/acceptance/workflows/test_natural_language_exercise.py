@@ -20,6 +20,11 @@ from tools.workflows import natural_language_publication as publication
 NOW = datetime(2026, 8, 17, 6, 7, 8, tzinfo=timezone.utc)
 
 
+def test_query_freezes_canonical_price_unit() -> None:
+    assert "USD per kilogram ($/kg)" in publication.QUERY
+    assert "without converting the unit" in publication.QUERY
+
+
 def _binding() -> dict[str, str]:
     return {
         "p1_06_evidence_path": "docs/findings/phase1/evidence/rolling_origin.json",

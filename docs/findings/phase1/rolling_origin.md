@@ -1,6 +1,6 @@
 # Phase 1 Monthly Rolling-Origin Forecasting
 
-- Run ID: `P1-06-20260816142818Z`
+- Run ID: `P1-06-20260824155719Z`
 - Classification: `pass`
 - Marker state: `pass_final`
 - Reference model: `autogluon/chronos-2-small`
@@ -8,9 +8,9 @@
 - Execution mode: `zero_shot_forecast_only`
 - TimeCopilot version: `0.0.30`
 - Chronos adapter package version: `0.2.2`
-- Network policy: `offline_cache_only`
-- Cache policy: `explicit_hf_hub_cache`
-- P1-05 evidence SHA-256: `d87ea4c8d3c0cc4fb2e7fd24174cc24b329fdc58242fc018eb4965db4b11fcf3`
+- Network policy: `connected_http_proxy`
+- Cache policy: `default_huggingface_cache`
+- P1-05 evidence SHA-256: `f63281c2ad5f58fe41c77b724fe96e3539713855a7fa4e8a77018c3fe080cea2`
 - Publication label: `revised_workbook_pseudo_real_time`
 - Availability proxy: `strict_prior_month`
 - Vintage limitation: Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.
