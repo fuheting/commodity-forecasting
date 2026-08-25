@@ -61,10 +61,10 @@
   "non_pass_diagnostics": [],
   "publication_protocol": {
     "commit_marker_valid": true,
-    "evaluation_markdown_sha256": "7c5beac954d84aa39586cc7321b104d2e3925743af1da42639c5e26af6fd1fa1",
+    "evaluation_markdown_sha256": "e3404e8f49b5402d9c6aca0b6ce6822027cf402ae28ac552ec821af4e423440b",
     "marker_path": "docs/findings/phase1/evidence/evaluation.json",
     "marker_state": "pass_final",
-    "prior_marker_sha256": "335966425dcfde2af239e02918f124d44308bb731307ea835f6f7b7f059368bc",
+    "prior_marker_sha256": "40b0f30d051de0d2aeff29447b919168e713edc4326c26a7153d3131777648a6",
     "write_order": [
       "evaluation.md",
       "evaluation.json"
@@ -77,56 +77,56 @@
       "interval": {
         "empirical_coverage": 1.0,
         "level": 80,
-        "mean_width": 1.8552626503838434
+        "mean_width": 1.8552624384562175
       },
       "point": {
-        "mae": 0.4907790289984809,
-        "rmse": 0.5155765704172461
+        "mae": 0.49077849917941624,
+        "rmse": 0.5155761279810935
       },
       "quantiles": [
         {
           "empirical_coverage": 0.0,
-          "mean_pinball_loss": 0.09041391012403702,
+          "mean_pinball_loss": 0.09041389422946507,
           "quantile": 0.1
         },
         {
           "empirical_coverage": 0.1111111111111111,
-          "mean_pinball_loss": 0.11581682756212024,
+          "mean_pinball_loss": 0.11581674279106988,
           "quantile": 0.2
         },
         {
           "empirical_coverage": 0.5555555555555556,
-          "mean_pinball_loss": 0.17421651289198134,
+          "mean_pinball_loss": 0.17421635924445256,
           "quantile": 0.3
         },
         {
           "empirical_coverage": 0.5555555555555556,
-          "mean_pinball_loss": 0.2301799079047309,
+          "mean_pinball_loss": 0.23017973836263017,
           "quantile": 0.4
         },
         {
           "empirical_coverage": 0.5555555555555556,
-          "mean_pinball_loss": 0.24538951449924046,
+          "mean_pinball_loss": 0.24538924958970812,
           "quantile": 0.5
         },
         {
           "empirical_coverage": 0.6666666666666666,
-          "mean_pinball_loss": 0.22913362248738606,
+          "mean_pinball_loss": 0.22913348473442927,
           "quantile": 0.6
         },
         {
           "empirical_coverage": 0.6666666666666666,
-          "mean_pinball_loss": 0.19543644184536405,
+          "mean_pinball_loss": 0.195436367670695,
           "quantile": 0.7
         },
         {
           "empirical_coverage": 0.8888888888888888,
-          "mean_pinball_loss": 0.14116811837090382,
+          "mean_pinball_loss": 0.14116805479261607,
           "quantile": 0.8
         },
         {
           "empirical_coverage": 1.0,
-          "mean_pinball_loss": 0.0951123549143473,
+          "mean_pinball_loss": 0.09511234961615665,
           "quantile": 0.9
         }
       ],
@@ -139,56 +139,56 @@
         "interval": {
           "empirical_coverage": 1.0,
           "level": 80,
-          "mean_width": 1.2332220077514648
+          "mean_width": 1.2332215309143066
         },
         "point": {
-          "mae": 0.41748908996582035,
-          "rmse": 0.4258944957878281
+          "mae": 0.4174884541829427,
+          "rmse": 0.4258938480797753
         },
         "quantiles": [
           {
             "empirical_coverage": 0.0,
-            "mean_pinball_loss": 0.06215593401590983,
+            "mean_pinball_loss": 0.06215590222676595,
             "quantile": 0.1
           },
           {
             "empirical_coverage": 0.3333333333333333,
-            "mean_pinball_loss": 0.10101331837972001,
+            "mean_pinball_loss": 0.10101312764485672,
             "quantile": 0.2
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.1339269911448161,
+            "mean_pinball_loss": 0.13392678451538087,
             "quantile": 0.3
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.18767886098225914,
+            "mean_pinball_loss": 0.18767863845825197,
             "quantile": 0.4
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.20874454498291017,
+            "mean_pinball_loss": 0.20874422709147136,
             "quantile": 0.5
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.2022005310058594,
+            "mean_pinball_loss": 0.20220030848185225,
             "quantile": 0.6
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.17317593383789065,
+            "mean_pinball_loss": 0.17317561594645184,
             "quantile": 0.7
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.12016992441813151,
+            "mean_pinball_loss": 0.1201696383158366,
             "quantile": 0.8
           },
           {
             "empirical_coverage": 1.0,
-            "mean_pinball_loss": 0.06116626675923664,
+            "mean_pinball_loss": 0.0611662508646647,
             "quantile": 0.9
           }
         ],
@@ -203,8 +203,8 @@
           "mean_width": 1.8837901751200359
         },
         "point": {
-          "mae": 0.5496101570129394,
-          "rmse": 0.5514940084153178
+          "mae": 0.5496096801757812,
+          "rmse": 0.5514935637466089
         },
         "quantiles": [
           {
@@ -214,37 +214,37 @@
           },
           {
             "empirical_coverage": 0.0,
-            "mean_pinball_loss": 0.08215583419799806,
+            "mean_pinball_loss": 0.08215580240885417,
             "quantile": 0.2
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.17585209910074862,
+            "mean_pinball_loss": 0.1758518924713134,
             "quantile": 0.3
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.24686939748128248,
+            "mean_pinball_loss": 0.24686917495727534,
             "quantile": 0.4
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.2748050785064697,
+            "mean_pinball_loss": 0.2748048400878906,
             "quantile": 0.5
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.26174636967976883,
+            "mean_pinball_loss": 0.2617461153666178,
             "quantile": 0.6
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.20777984873453773,
+            "mean_pinball_loss": 0.20777962621053056,
             "quantile": 0.7
           },
           {
             "empirical_coverage": 1.0,
-            "mean_pinball_loss": 0.1594155921936035,
+            "mean_pinball_loss": 0.15941562398274736,
             "quantile": 0.8
           },
           {
@@ -261,51 +261,51 @@
         "interval": {
           "empirical_coverage": 1.0,
           "level": 80,
-          "mean_width": 2.4487757682800293
+          "mean_width": 2.44877560933431
         },
         "point": {
-          "mae": 0.505237840016683,
-          "rmse": 0.5585032112971828
+          "mae": 0.5052373631795248,
+          "rmse": 0.558502919012781
         },
         "quantiles": [
           {
             "empirical_coverage": 0.0,
-            "mean_pinball_loss": 0.12991300900777183,
+            "mean_pinball_loss": 0.1299129931131999,
             "quantile": 0.1
           },
           {
             "empirical_coverage": 0.0,
-            "mean_pinball_loss": 0.16428133010864263,
+            "mean_pinball_loss": 0.16428129831949873,
             "quantile": 0.2
           },
           {
             "empirical_coverage": 0.3333333333333333,
-            "mean_pinball_loss": 0.21287044843037925,
+            "mean_pinball_loss": 0.2128704007466634,
             "quantile": 0.3
           },
           {
             "empirical_coverage": 0.3333333333333333,
-            "mean_pinball_loss": 0.2559914652506511,
+            "mean_pinball_loss": 0.25599140167236334,
             "quantile": 0.4
           },
           {
             "empirical_coverage": 0.3333333333333333,
-            "mean_pinball_loss": 0.2526189200083415,
+            "mean_pinball_loss": 0.2526186815897624,
             "quantile": 0.5
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.22345396677652996,
+            "mean_pinball_loss": 0.2234540303548177,
             "quantile": 0.6
           },
           {
             "empirical_coverage": 0.6666666666666666,
-            "mean_pinball_loss": 0.2053535429636638,
+            "mean_pinball_loss": 0.20535386085510257,
             "quantile": 0.7
           },
           {
             "empirical_coverage": 1.0,
-            "mean_pinball_loss": 0.1439188385009765,
+            "mean_pinball_loss": 0.14391890207926425,
             "quantile": 0.8
           },
           {
@@ -318,20 +318,20 @@
       }
     ]
   },
-  "run_id": "P1-07-20260816T154620Z",
+  "run_id": "P1-07-20260824T155741Z",
   "schema_version": 1,
   "source_binding": {
     "p1_06_evidence_path": "docs/findings/phase1/evidence/rolling_origin.json",
-    "p1_06_evidence_sha256": "59b6b161710e1eaac833baa84668fb9d84f9c3f5489ec55f71b9dcd908a75d76",
+    "p1_06_evidence_sha256": "e4e25799e463d4d1a4078c7b45260b7834d029aa8d0d07f54c024b246fc1821c",
     "p1_06_forecast_csv_path": "data/model_ready/world_bank_pink_sheet_monthly_arabica/rolling_origin/forecasts.csv",
-    "p1_06_forecast_csv_sha256": "ad5d613e86dd5f138f83568694243ce32417cc784317e7ab7e72a8327c8ceaf4",
+    "p1_06_forecast_csv_sha256": "0b4fe7f4a2ede4a55590c6e8840ac898cfd5e72a9070c5b94039c91c796c8eb2",
     "p1_06_marker_state": "pass_final",
     "p1_06_publication_label": "revised_workbook_pseudo_real_time",
     "p1_06_publication_proxy": "strict_prior_month",
     "p1_06_reference_model_id": "autogluon/chronos-2-small",
-    "p1_06_run_id": "P1-06-20260816142818Z",
+    "p1_06_run_id": "P1-06-20260824155719Z",
     "p1_06_vintage_limitation": "Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions."
   },
   "task_id": "P1-07",
-  "timestamp_utc": "2026-08-16T15:46:20.257571Z"
+  "timestamp_utc": "2026-08-24T15:57:41.447329Z"
 }

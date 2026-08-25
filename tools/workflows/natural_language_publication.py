@@ -28,7 +28,8 @@ TASK_ID = "P1-08"
 SCHEMA_VERSION = 1
 QUERY = (
     "For Coffee, Arabica, using the 60-month monthly history through April 2026 "
-    "and the May-July 2026 forecast horizon, explain the next 3-month outlook, "
+    "where every price is measured in USD per kilogram ($/kg), and the May-July 2026 "
+    "forecast horizon, explain the next 3-month outlook without converting the unit, "
     "note the main historical pattern the model sees, and summarize the uncertainty "
     "in plain language."
 )

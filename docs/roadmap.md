@@ -1,6 +1,6 @@
 # Roadmap
 
-## Current Status: Phase 0 Complete; Phase 1 Exit Rollup Pending
+## Current Status: Phase 0 Complete; Phase 1 Complete
 
 > Phase 0 evidence supports a lean monthly Arabica PoC using the preserved World Bank Pink Sheet workbook. Do not add API acquisition or futures settlement work to the active PoC unless the scope is explicitly revised.
 
@@ -27,7 +27,7 @@ State markers:
 
 ---
 
-## Phase 1: Monthly Arabica History-Only Forecasting (Planned)
+## Phase 1: Monthly Arabica History-Only Forecasting (Complete)
 
 Execution plan: `docs/tasks/phase1-history-only-forecasting.md`.
 
@@ -39,7 +39,7 @@ Execution plan: `docs/tasks/phase1-history-only-forecasting.md`.
 - [x] **P1-06 — Monthly rolling-origin forecasts.** Depends on P1-05. Run exactly 3 one-month-step origins using exactly 60 historic-context months and a 3-month horizon, history only. The zero-shot Time Series Foundation Model remains frozen; no per-origin fitting, fine-tuning, or weight updates occur. Evidence: forecast artifacts and `docs/findings/phase1/rolling_origin.md`.
 - [x] **P1-07 — Point and probabilistic evaluation.** Depends on P1-06. Report MAE and RMSE plus interval coverage/width or quantile pinball loss/coverage, without a performance threshold. Evidence: `docs/findings/phase1/evaluation.md` and `docs/findings/phase1/evidence/evaluation.json`.
 - [x] **P1-08 — Natural-language exercise.** Depends on P1-06. Use PydanticAI's native DeepSeek provider through TimeCopilot (`deepseek:deepseek-v4-flash`); no custom DeepSeek adapter is required. Load `DEEPSEEK_API_KEY` from `.env` without persisting its value, then require non-empty forecast analysis and a query-specific response on the Phase 1 workflow. Evidence: `docs/findings/phase1/natural_language.md` and `docs/findings/phase1/evidence/natural_language.json`.
-- [ ] **P1-09 — Evidence rollup and Phase 1 exit.** Depends on P1-01 through P1-08. Cross-link all evidence, decisions, unknowns, and limitations, then update task status only where acceptance evidence passes. Evidence: `docs/findings/phase1/exit_rollup.md` and `docs/findings/phase1/evidence/exit_rollup.json`.
+- [x] **P1-09 — Evidence rollup and Phase 1 exit.** Depends on P1-01 through P1-08. Cross-link all evidence, decisions, unknowns, and limitations, then update task status only where acceptance evidence passes. Evidence: `docs/findings/phase1/exit_rollup.md` and `docs/findings/phase1/evidence/exit_rollup.json`.
 
 **Exit condition:** P1-01 through P1-08 have passing acceptance evidence; the monthly pipeline is reproducible and leakage-safe; the screened shortlist was explicitly approved before runtime tests; one approved reference model produced the required 3 rolling-origin probabilistic forecasts; point accuracy and probabilistic calibration are reported without a score gate; the natural-language workflow passes; and P1-09 confirms that the roadmap matches the evidence. `blocked` and `unsupported` records are valid findings but do not complete a task or Phase 1.
 

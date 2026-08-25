@@ -1,0 +1,295 @@
+# Phase 1 Evidence Rollup and Exit
+
+- Task: `P1-09`
+- Generated at: `2026-08-25T01:15:11Z`
+- Phase outcome: `complete`
+
+## Predecessor task results
+
+| Task | Outcome | Canonical evidence | Finding | Reason |
+| --- | --- | --- | --- | --- |
+| `P1-01` | `pass` | `docs/findings/phase1/evidence/dependency_readiness.json` | `docs/findings/phase1/dependency_readiness.md` | `canonical validator passed` |
+| `P1-02` | `pass` | `docs/findings/phase1/evidence/target_pipeline.json` | `docs/findings/phase1/target_pipeline.md` | `canonical validator passed` |
+| `P1-03` | `pass` | `docs/findings/phase1/evidence/model_screening.json` | `docs/findings/phase1/model_screening.md` | `canonical validator passed` |
+| `P1-04` | `pass` | `docs/findings/phase1/evidence/shortlist_approval.json` | `docs/findings/phase1/shortlist_approval.md` | `canonical validator passed` |
+| `P1-05` | `pass` | `docs/findings/phase1/evidence/runtime_compatibility.json` | `docs/findings/phase1/runtime_compatibility.md` | `canonical validator passed` |
+| `P1-06` | `pass` | `docs/findings/phase1/evidence/rolling_origin.json` | `docs/findings/phase1/rolling_origin.md` | `canonical validator passed` |
+| `P1-07` | `pass` | `docs/findings/phase1/evidence/evaluation.json` | `docs/findings/phase1/evaluation.md` | `canonical validator passed` |
+| `P1-08` | `pass` | `docs/findings/phase1/evidence/natural_language.json` | `docs/findings/phase1/natural_language.md` | `canonical validator passed` |
+
+## Incomplete gates
+
+- None
+
+## Preserved observations
+
+- `P1-01` / `limitations` / `publication_policy.limitation`
+  - Source: `docs/findings/phase1/evidence/dependency_readiness.json`
+  - Value: `Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.`
+- `P1-02` / `limitations` / `publication_policy.limitation`
+  - Source: `docs/findings/phase1/evidence/target_pipeline.json`
+  - Value: `Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.`
+- `P1-03` / `unknowns` / `checks.required_unknowns_excluded_from_eligibility`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `true`
+- `P1-03` / `unknowns` / `derived_counts.unknown/ineligible`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `43`
+- `P1-03` / `unknowns` / `variant_records[0].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[1].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[2].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[3].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[4].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[5].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[6].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[7].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[8].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[9].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[10].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[11].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[12].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[13].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[14].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[15].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[16].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[17].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[18].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[19].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[20].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[21].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[22].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["artifact_license.value.poc_use","code_license.value.poc_use","device_status","documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","runtime_auth","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[23].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["artifact_license.value.poc_use","code_license.value.poc_use","documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[24].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["artifact_license.value.poc_use","code_license.value.poc_use","documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[25].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[26].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[27].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[28].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[29].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[30].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[31].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[32].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[33].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[34].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[35].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[36].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[37].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[38].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[39].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[40].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[41].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[42].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[43].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","offline_after_acquisition","source_version_or_date","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-03` / `unknowns` / `variant_records[44].unknowns`
+  - Source: `docs/findings/phase1/evidence/model_screening.json`
+  - Value: `["artifact_license.value.poc_use","code_license.value.poc_use","documented_memory_vram_requirement","fit_against_16gb_target","monthly_history_only_60x3_support","source_version_or_date","timecopilot_adapter.artifact_identity","timecopilot_adapter.interval","timecopilot_adapter.point","timecopilot_adapter.quantile"]`
+- `P1-04` / `unknowns` / `accepted_unknown_risk_variant_ids`
+  - Source: `docs/findings/phase1/evidence/shortlist_approval.json`
+  - Value: `["amazon/chronos-2","autogluon/chronos-2-synth","autogluon/chronos-2-small","google/timesfm-1.0-200m-pytorch","google/timesfm-2.5-200m-transformers"]`
+- `P1-04` / `unknowns` / `checks.unknown_risks_explicitly_accepted`
+  - Source: `docs/findings/phase1/evidence/shortlist_approval.json`
+  - Value: `true`
+- `P1-04` / `unknowns` / `screening_counts.unknown/ineligible`
+  - Source: `docs/findings/phase1/evidence/shortlist_approval.json`
+  - Value: `43`
+- `P1-04` / `unknowns` / `unapproved_unknown_variant_ids`
+  - Source: `docs/findings/phase1/evidence/shortlist_approval.json`
+  - Value: `["amazon/chronos-bolt-tiny","amazon/chronos-bolt-mini","amazon/chronos-bolt-small","amazon/chronos-bolt-base","amazon/chronos-t5-tiny","amazon/chronos-t5-mini","amazon/chronos-t5-small","amazon/chronos-t5-base","amazon/chronos-t5-large","ibm-research/flowstate","ibm-granite/granite-timeseries-flowstate-r1","Salesforce/moirai-1.1-R-small","Salesforce/moirai-1.1-R-base","Salesforce/moirai-moe-1.0-R-base","Salesforce/moirai-2.0-R-small","Salesforce/moirai-1.0-R-large","ibm-research/patchtst-fm-r1","ibm-granite/granite-timeseries-patchtst-fm-r1","thuml/sundial-base-128m","TabPFN-TS-3","NX-AI/TiRex","NX-AI/TiRex-1.1-gifteval","NX-AI/TiRex-2","NX-AI/TiRex-2-gifteval-zs","NX-AI/TiRex-2-gifteval-pretrain","NX-AI/TiRex-2-fevbench","google/timesfm-1.0-200m","google/timesfm-2.0-500m-jax","google/timesfm-2.0-500m-pytorch","google/timesfm-2.5-200m-pytorch","google/timesfm-2.5-200m-flax","Datadog/Toto-Open-Base-1.0","Datadog/Toto-2.0-4m","Datadog/Toto-2.0-22m","Datadog/Toto-2.0-313m","Datadog/Toto-2.0-1B","Datadog/Toto-2.0-2.5B","Datadog/Toto-2.0-2.5B-FT"]`
+- `P1-05` / `errors` / `candidate_records[3].errors`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `[{"error":"shape '[1, -1, 32]' is invalid for input of size 60","exception_class":"RuntimeError","stage":"connected_point"},{"error":"TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286","exception_class":"ValueError","stage":"connected_interval"},{"error":"shape '[1, -1, 32]' is invalid for input of size 60","exception_class":"RuntimeError","stage":"connected_quantiles"},{"error":"connected_point did not succeed","exception_class":null,"stage":"offline_point"},{"error":"connected_interval did not succeed","exception_class":null,"stage":"offline_interval"},{"error":"connected_quantiles did not succeed","exception_class":null,"stage":"offline_quantiles"}]`
+- `P1-05` / `errors` / `candidate_records[3].errors[0].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `shape '[1, -1, 32]' is invalid for input of size 60`
+- `P1-05` / `errors` / `candidate_records[3].errors[1].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286`
+- `P1-05` / `errors` / `candidate_records[3].errors[2].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `shape '[1, -1, 32]' is invalid for input of size 60`
+- `P1-05` / `errors` / `candidate_records[3].errors[3].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_point did not succeed`
+- `P1-05` / `errors` / `candidate_records[3].errors[4].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_interval did not succeed`
+- `P1-05` / `errors` / `candidate_records[3].errors[5].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_quantiles did not succeed`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[0].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `shape '[1, -1, 32]' is invalid for input of size 60`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[1].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[2].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `shape '[1, -1, 32]' is invalid for input of size 60`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[3].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_point did not succeed`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[4].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_interval did not succeed`
+- `P1-05` / `errors` / `candidate_records[3].stage_history[5].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_quantiles did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].errors`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `[{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_point"},{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_interval"},{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_quantiles"},{"error":"connected_point did not succeed","exception_class":null,"stage":"offline_point"},{"error":"connected_interval did not succeed","exception_class":null,"stage":"offline_interval"},{"error":"connected_quantiles did not succeed","exception_class":null,"stage":"offline_quantiles"}]`
+- `P1-05` / `errors` / `candidate_records[4].errors[0].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].errors[1].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].errors[2].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].errors[3].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_point did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].errors[4].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_interval did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].errors[5].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_quantiles did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[0].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[1].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[2].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `TimesFM only supports pytorch models, if you'd like to use jax, please open an issue`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[3].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_point did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[4].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_interval did not succeed`
+- `P1-05` / `errors` / `candidate_records[4].stage_history[5].error`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `connected_quantiles did not succeed`
+- `P1-05` / `candidate_non_pass` / `candidate_records[3]`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `{"candidate_id":"google/timesfm-1.0-200m-pytorch","errors":[{"error":"shape '[1, -1, 32]' is invalid for input of size 60","exception_class":"RuntimeError","stage":"connected_point"},{"error":"TimesFM only supports the default quantiles, please use the default quantiles or default level, see https://github.com/google-research/timesfm/issues/286","exception_class":"ValueError","stage":"connected_interval"},{"error":"shape '[1, -1, 32]' is invalid for input of size 60","exception_class":"RuntimeError","stage":"connected_quantiles"},{"error":"connected_point did not succeed","exception_class":null,"stage":"offline_point"},{"error":"connected_interval did not succeed","exception_class":null,"stage":"offline_interval"},{"error":"connected_quantiles did not succeed","exception_class":null,"stage":"offline_quantiles"}],"outcome":"fail"}`
+- `P1-05` / `candidate_non_pass` / `candidate_records[4]`
+  - Source: `docs/findings/phase1/evidence/runtime_compatibility.json`
+  - Value: `{"candidate_id":"google/timesfm-2.5-200m-transformers","errors":[{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_point"},{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_interval"},{"error":"TimesFM only supports pytorch models, if you'd like to use jax, please open an issue","exception_class":"ValueError","stage":"connected_quantiles"},{"error":"connected_point did not succeed","exception_class":null,"stage":"offline_point"},{"error":"connected_interval did not succeed","exception_class":null,"stage":"offline_interval"},{"error":"connected_quantiles did not succeed","exception_class":null,"stage":"offline_quantiles"}],"outcome":"unsupported"}`
+- `P1-06` / `limitations` / `publication_policy.limitation`
+  - Source: `docs/findings/phase1/evidence/rolling_origin.json`
+  - Value: `Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.`
+- `P1-07` / `limitations` / `source_binding.p1_06_vintage_limitation`
+  - Source: `docs/findings/phase1/evidence/evaluation.json`
+  - Value: `Historical release timestamps and vintages are not available in the preserved workbook. Strict prior-month eligibility is a conservative simulation assumption, not a verified historical publication date; the latest workbook can contain revisions.`
+
+## Roadmap reconciliation
+
+- Current-status heading: `## Current Status: Phase 0 Complete; Phase 1 Complete`
+- Phase 1 heading: `## Phase 1: Monthly Arabica History-Only Forecasting (Complete)`
+- Directly compared non-owned lines: `62`
+- `P1-01` checkbox: `[x]`
+- `P1-02` checkbox: `[x]`
+- `P1-03` checkbox: `[x]`
+- `P1-04` checkbox: `[x]`
+- `P1-05` checkbox: `[x]`
+- `P1-06` checkbox: `[x]`
+- `P1-07` checkbox: `[x]`
+- `P1-08` checkbox: `[x]`
+- `P1-09` checkbox: `[x]`
+
+## Published artifacts
+
+- Markdown: `docs/findings/phase1/exit_rollup.md`
+- JSON: `docs/findings/phase1/evidence/exit_rollup.json`
+- Roadmap: `docs/roadmap.md`

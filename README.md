@@ -6,7 +6,7 @@ The fixed experiment uses a 60-month history, a 3-month horizon, and three one-m
 
 ## Status
 
-Phase 0 discovery and Phase 1 execution tasks P1-01 through P1-08 are complete. The P1-09 evidence rollup is still pending, so Phase 1 is not marked complete.
+Phase 0 discovery and Phase 1 execution tasks P1-01 through P1-09 are complete. The P1-09 exit rollup validates that the Phase 1 roadmap matches passing canonical evidence.
 
 See `docs/roadmap.md` for evidence-linked status and `docs/architecture.md` for the code layout.
 

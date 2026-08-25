@@ -19,8 +19,8 @@ from typing import Mapping, Sequence
 from .readiness_contract import PUBLICATION_POLICY
 from .target_publication import MODEL_READY_RELATIVE_PATH, TargetRow, parse_target_csv
 
-P1_05_EVIDENCE_SHA256 = "d87ea4c8d3c0cc4fb2e7fd24174cc24b329fdc58242fc018eb4965db4b11fcf3"
-P1_05_RUN_ID = "P1-05-20260816T064548Z"
+P1_05_EVIDENCE_SHA256 = "f63281c2ad5f58fe41c77b724fe96e3539713855a7fa4e8a77018c3fe080cea2"
+P1_05_RUN_ID = "P1-05-20260824T155057Z"
 REFERENCE_MODEL_ID = "autogluon/chronos-2-small"
 CONTEXT_MONTHS = 60
 FORECAST_MONTHS = 3

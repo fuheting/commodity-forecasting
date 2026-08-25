@@ -18,13 +18,13 @@
   "errors": [],
   "execution_receipt": {
     "adapter_class": "timecopilot.models.foundation.chronos.Chronos",
-    "cache_policy": "explicit_hf_hub_cache",
+    "cache_policy": "default_huggingface_cache",
     "call_receipts": [
       {
         "input_digest": "50db18f31ddc9a366e5a6585d3143d01d98fed4552ed1554333885648bfd2743",
         "origin": "2026-03-01",
         "output_rows": 3,
-        "output_sha256": "b04cc7dbc671d777eb5a8f61c930b7536cbd4a045c12f2596f32d71807eb7d6f",
+        "output_sha256": "300ddc0b1ff20eb4b5bb494125fbe79b13bec11145f58bcee52d6a4b24f907ae",
         "request_kind": "point",
         "status": "success"
       },
@@ -32,7 +32,7 @@
         "input_digest": "50db18f31ddc9a366e5a6585d3143d01d98fed4552ed1554333885648bfd2743",
         "origin": "2026-03-01",
         "output_rows": 3,
-        "output_sha256": "b9bd6fdbce5d012183be505200ec716d088d2d70e8e9d1de63013de05a2bb61d",
+        "output_sha256": "ed939c41f61ddc2180927ff7609b0d1f4715916e65e3adafa59d96e621360be5",
         "request_kind": "interval_80",
         "status": "success"
       },
@@ -40,7 +40,7 @@
         "input_digest": "50db18f31ddc9a366e5a6585d3143d01d98fed4552ed1554333885648bfd2743",
         "origin": "2026-03-01",
         "output_rows": 3,
-        "output_sha256": "f76d9ca91588df24719dff620dbc65d2d672cf3d50eff48816f738e0444069bd",
+        "output_sha256": "6b9ca8067584e29e7cf0678dc3d8afe8b8ed17a362c66ffb9afda932bfdc9ac6",
         "request_kind": "quantiles_01_09",
         "status": "success"
       },
@@ -48,7 +48,7 @@
         "input_digest": "f56d1d82e16747b8b797c522260dfc0ae7796205d248953b4da93bc8d7bcd7e4",
         "origin": "2026-04-01",
         "output_rows": 3,
-        "output_sha256": "f8ed1ad83c59640b113fb645f3389020bd8412f8885a1f301900e2b09113d49b",
+        "output_sha256": "929b681c3052d5bf602a823c1f808445b791295a41a4b90d9a0c175305af1aac",
         "request_kind": "point",
         "status": "success"
       },
@@ -56,7 +56,7 @@
         "input_digest": "f56d1d82e16747b8b797c522260dfc0ae7796205d248953b4da93bc8d7bcd7e4",
         "origin": "2026-04-01",
         "output_rows": 3,
-        "output_sha256": "1fa0da89e3f30858e68152146fd07a6e069719779068f73353544bfeeac1baf0",
+        "output_sha256": "8237c0ad6dfd9409ce33f153c9424bef8ebc834ca292f3975b147b341fa26732",
         "request_kind": "interval_80",
         "status": "success"
       },
@@ -64,7 +64,7 @@
         "input_digest": "f56d1d82e16747b8b797c522260dfc0ae7796205d248953b4da93bc8d7bcd7e4",
         "origin": "2026-04-01",
         "output_rows": 3,
-        "output_sha256": "0ae494a4f8d5f97b204be32b9067f3f61716ca8578731ef10ae56a6b67cd4d50",
+        "output_sha256": "98b0494184951dc0ef5882d67d2dd6d4c7b2d2413e6a89cb1977d8456ad03a0f",
         "request_kind": "quantiles_01_09",
         "status": "success"
       },
@@ -72,7 +72,7 @@
         "input_digest": "fe4a804b17572d1e2bd19905575eb3bc5fad156b28ca42088d30e97ea3af4200",
         "origin": "2026-05-01",
         "output_rows": 3,
-        "output_sha256": "2df9d99dfce6f80da37c8f4d1db7c2f4994e17adb8c6b64072db41cc54f45999",
+        "output_sha256": "4fd1cca113293d40412c63a03bb4937a8f17f0fded67c46fadaf1a4d5bb5544a",
         "request_kind": "point",
         "status": "success"
       },
@@ -80,7 +80,7 @@
         "input_digest": "fe4a804b17572d1e2bd19905575eb3bc5fad156b28ca42088d30e97ea3af4200",
         "origin": "2026-05-01",
         "output_rows": 3,
-        "output_sha256": "def9d83aea2b9cd0f45162ed701e4f5677e387199c1f4f93c646439405a1a99a",
+        "output_sha256": "6907612f1ccd416eab8d7393355d8c91c7d769efa79144dee8bdde623570e5e9",
         "request_kind": "interval_80",
         "status": "success"
       },
@@ -88,7 +88,7 @@
         "input_digest": "fe4a804b17572d1e2bd19905575eb3bc5fad156b28ca42088d30e97ea3af4200",
         "origin": "2026-05-01",
         "output_rows": 3,
-        "output_sha256": "42511aaaab2a16cec36f245dc19e05ceb6cbe8449c20a7fe602bdd8a15ae6772",
+        "output_sha256": "443c9f0e47717565654c8877414df4dd415080b3ea47111db01a30f54a07053a",
         "request_kind": "quantiles_01_09",
         "status": "success"
       }
@@ -96,7 +96,7 @@
     "execution_mode": "zero_shot_forecast_only",
     "model_alias": "P105",
     "model_id": "autogluon/chronos-2-small",
-    "network_policy": "offline_cache_only",
+    "network_policy": "connected_http_proxy",
     "package_versions": {
       "timecopilot": "0.0.30",
       "timecopilot-chronos-forecasting": "0.2.2"
@@ -277,11 +277,11 @@
       }
     }
   ],
-  "p1_05_evidence_sha256": "d87ea4c8d3c0cc4fb2e7fd24174cc24b329fdc58242fc018eb4965db4b11fcf3",
-  "p1_05_run_id": "P1-05-20260816T064548Z",
+  "p1_05_evidence_sha256": "f63281c2ad5f58fe41c77b724fe96e3539713855a7fa4e8a77018c3fe080cea2",
+  "p1_05_run_id": "P1-05-20260824T155057Z",
   "p1_05_selection": {
     "matrix_completeness": "complete",
-    "run_id": "P1-05-20260816T064548Z",
+    "run_id": "P1-05-20260824T155057Z",
     "schema_version": 1,
     "selected_candidate": {
       "contract_completeness": true,
@@ -303,11 +303,11 @@
   },
   "publication_protocol": {
     "commit_marker_valid": true,
-    "csv_sha256": "ad5d613e86dd5f138f83568694243ce32417cc784317e7ab7e72a8327c8ceaf4",
-    "markdown_sha256": "e638db0eb4d485aa201a9459dd055c2370d65cf70b20abf9db1dfbaa39ca4aa2",
+    "csv_sha256": "0b4fe7f4a2ede4a55590c6e8840ac898cfd5e72a9070c5b94039c91c796c8eb2",
+    "markdown_sha256": "6b2cd38564abee701154ecf2904b7d4221901a808b9a3141b1c9d70cc7d6c270",
     "marker_path": "docs/findings/phase1/evidence/rolling_origin.json",
     "marker_state": "pass_final",
-    "prior_marker_sha256": "fea8aa815b39ff1de54a435086c919bf428a2fa6fe0a949ba2a4e3a661041ca0",
+    "prior_marker_sha256": "ad6bbf2b00ed5b7789c2c8cbde8c31e19cdcf22e01e66f02b536f1956c540d6a",
     "replacements_fsynchronized": true,
     "write_order": [
       "forecasts.csv",
@@ -369,7 +369,7 @@
     },
     "serial_forecast_calls": 9
   },
-  "run_id": "P1-06-20260816142818Z",
+  "run_id": "P1-06-20260824155719Z",
   "schedule": {
     "cutoff_months": [
       "2026-02-01",
@@ -429,5 +429,5 @@
   "schema_version": 1,
   "target_artifact_sha256": "f360fc49d2537785ea4b5b51809cac8186048059121c5b16864a0ca25f06cbb7",
   "task_id": "P1-06",
-  "timestamp_utc": "2026-08-16T14:28:18Z"
+  "timestamp_utc": "2026-08-24T15:57:19Z"
 }
